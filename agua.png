@@ -1,0 +1,1151 @@
+<!doctype html >
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html dir="ltr" lang="pt-BR" prefix="og: https://ogp.me/ns#"> <!--<![endif]-->
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.4",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let r=e.getAttribute("data-rocket-src");if(r&&0!==r.indexOf("data:")){0===r.indexOf("//")&&(r=location.protocol+r);try{let i=new URL(r).origin;i!==location.origin&&t.push({src:i,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(n){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){if(await this._littleBreath(),!0===t.noModule&&"noModule"in HTMLScriptElement.prototype){t.setAttribute("data-rocket-status","skipped");return}return new Promise(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(){let t={};function e(e,r){!function e(r){!t[r]&&(t[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),t[r].originalFunctions.remove.apply(r,arguments)});function i(e){return t[r].eventsToRewrite.indexOf(e)>=0?"rocket-"+e:e}}(e),t[e].eventsToRewrite.push(r)}function r(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}e(document,"DOMContentLoaded"),e(window,"DOMContentLoaded"),e(window,"load"),e(window,"pageshow"),e(document,"readystatechange"),r(document,"onreadystatechange"),r(window,"onload"),r(window,"onpageshow")}_delayJQueryReady(t){let e;function r(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}function i(i){if(i&&i.fn&&!t.allJQueries.includes(i)){i.fn.ready=i.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(i):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(i)),i([])};let n=i.fn.on;i.fn.on=i.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=r(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{let e=arguments[0][t];delete arguments[0][t],arguments[0][r(t)]=e})),n.apply(this,arguments),this},t.allJQueries.push(i)}e=i}i(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){i(t)}})}async _pendingWebpackRequests(t){let e=document.querySelector("script[data-webpack]");async function r(){return new Promise(t=>{e.addEventListener("load",t),e.addEventListener("error",t)})}e&&(await r(),await t._requestAnimFrame(),await t._pendingWebpackRequests(t))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="https://jornalceleiro.com.br/xmlrpc.php" />
+    
+		<!-- All in One SEO 4.5.4 - aioseo.com -->
+		<title>Chegada do verão deixa alerta para água parada - Jornal O Celeiro</title>
+		<meta name="description" content="Com a chegada do verão, aumento da temperatura e das chuvas, há também o aumento do risco de proliferação do mosquito Aedes aegypti, esta espécie é beneficiada durante estes períodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com água parada que servem de criadouros para" />
+		<meta name="robots" content="max-image-preview:large" />
+		<link rel="canonical" href="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 4.5.4" />
+		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:site_name" content="Jornal O Celeiro - Jornal de todos!" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Chegada do verão deixa alerta para água parada - Jornal O Celeiro" />
+		<meta property="og:description" content="Com a chegada do verão, aumento da temperatura e das chuvas, há também o aumento do risco de proliferação do mosquito Aedes aegypti, esta espécie é beneficiada durante estes períodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com água parada que servem de criadouros para" />
+		<meta property="og:url" content="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" />
+		<meta property="article:published_time" content="2017-12-08T12:12:59+00:00" />
+		<meta property="article:modified_time" content="2017-12-08T12:12:59+00:00" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Chegada do verão deixa alerta para água parada - Jornal O Celeiro" />
+		<meta name="twitter:description" content="Com a chegada do verão, aumento da temperatura e das chuvas, há também o aumento do risco de proliferação do mosquito Aedes aegypti, esta espécie é beneficiada durante estes períodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com água parada que servem de criadouros para" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BlogPosting","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#blogposting","name":"Chegada do ver\u00e3o deixa alerta para \u00e1gua parada - Jornal O Celeiro","headline":"Chegada do ver\u00e3o deixa alerta para \u00e1gua parada","author":{"@id":"https:\/\/jornalceleiro.com.br\/author\/redacao\/#author"},"publisher":{"@id":"https:\/\/jornalceleiro.com.br\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/jornalceleiro.com.br\/wp-content\/uploads\/2017\/12\/DSCF1059.jpg","width":4608,"height":3072},"datePublished":"2017-12-08T09:12:59-03:00","dateModified":"2017-12-08T09:12:59-03:00","inLanguage":"pt-BR","commentCount":1,"mainEntityOfPage":{"@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#webpage"},"isPartOf":{"@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#webpage"},"articleSection":"Sa\u00fade, \u00daltimas Not\u00edcias"},{"@type":"BreadcrumbList","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/jornalceleiro.com.br\/#listItem","position":1,"name":"Dom\u00e9stica","item":"https:\/\/jornalceleiro.com.br\/","nextItem":"https:\/\/jornalceleiro.com.br\/2017\/#listItem"},{"@type":"ListItem","@id":"https:\/\/jornalceleiro.com.br\/2017\/#listItem","position":2,"name":"2017","item":"https:\/\/jornalceleiro.com.br\/2017\/","nextItem":"https:\/\/jornalceleiro.com.br\/2017\/12\/#listItem","previousItem":"https:\/\/jornalceleiro.com.br\/#listItem"},{"@type":"ListItem","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/#listItem","position":3,"name":"December","item":"https:\/\/jornalceleiro.com.br\/2017\/12\/","nextItem":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#listItem","previousItem":"https:\/\/jornalceleiro.com.br\/2017\/#listItem"},{"@type":"ListItem","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#listItem","position":4,"name":"Chegada do ver\u00e3o deixa alerta para \u00e1gua parada","previousItem":"https:\/\/jornalceleiro.com.br\/2017\/12\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/jornalceleiro.com.br\/#organization","name":"Jornal O Celeiro","url":"https:\/\/jornalceleiro.com.br\/"},{"@type":"Person","@id":"https:\/\/jornalceleiro.com.br\/author\/redacao\/#author","url":"https:\/\/jornalceleiro.com.br\/author\/redacao\/","name":"Reda\u00e7\u00e3o"},{"@type":"WebPage","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#webpage","url":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/","name":"Chegada do ver\u00e3o deixa alerta para \u00e1gua parada - Jornal O Celeiro","description":"Com a chegada do ver\u00e3o, aumento da temperatura e das chuvas, h\u00e1 tamb\u00e9m o aumento do risco de prolifera\u00e7\u00e3o do mosquito Aedes aegypti, esta esp\u00e9cie \u00e9 beneficiada durante estes per\u00edodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com \u00e1gua parada que servem de criadouros para","inLanguage":"pt-BR","isPartOf":{"@id":"https:\/\/jornalceleiro.com.br\/#website"},"breadcrumb":{"@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#breadcrumblist"},"author":{"@id":"https:\/\/jornalceleiro.com.br\/author\/redacao\/#author"},"creator":{"@id":"https:\/\/jornalceleiro.com.br\/author\/redacao\/#author"},"image":{"@type":"ImageObject","url":"https:\/\/jornalceleiro.com.br\/wp-content\/uploads\/2017\/12\/DSCF1059.jpg","@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#mainImage","width":4608,"height":3072},"primaryImageOfPage":{"@id":"https:\/\/jornalceleiro.com.br\/2017\/12\/chegada-do-verao-deixa-alerta-para-agua-parada\/#mainImage"},"datePublished":"2017-12-08T09:12:59-03:00","dateModified":"2017-12-08T09:12:59-03:00"},{"@type":"WebSite","@id":"https:\/\/jornalceleiro.com.br\/#website","url":"https:\/\/jornalceleiro.com.br\/","name":"Jornal O Celeiro","description":"Jornal de todos!","inLanguage":"pt-BR","publisher":{"@id":"https:\/\/jornalceleiro.com.br\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Chegada do verão deixa alerta para água parada - Jornal O Celeiro" />
+	<meta property="og:description" content="Com a chegada do verão, aumento da temperatura e das chuvas, há também o aumento do risco de proliferação do mosquito Aedes aegypti, esta espécie é beneficiada durante estes períodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com água parada que servem de criadouros para [&hellip;]" />
+	<meta property="og:url" content="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" />
+	<meta property="og:site_name" content="Jornal O Celeiro" />
+	<meta property="article:publisher" content="https://www.facebook.com/jornaloceleiro/" />
+	<meta property="article:published_time" content="2017-12-08T12:12:59+00:00" />
+	<meta property="og:image" content="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059-1024x683.jpg" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="683" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Redação" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Escrito por" />
+	<meta name="twitter:data1" content="Redação" />
+	<meta name="twitter:label2" content="Est. tempo de leitura" />
+	<meta name="twitter:data2" content="2 minutos" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/","url":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/","name":"Chegada do verão deixa alerta para água parada - Jornal O Celeiro","isPartOf":{"@id":"https://jornalceleiro.com.br/#website"},"primaryImageOfPage":{"@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#primaryimage"},"image":{"@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#primaryimage"},"thumbnailUrl":"https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg","datePublished":"2017-12-08T12:12:59+00:00","dateModified":"2017-12-08T12:12:59+00:00","author":{"@id":"https://jornalceleiro.com.br/#/schema/person/9c8fec19f3e6dbc6790538f7be6e6db1"},"breadcrumb":{"@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/"]}]},{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#primaryimage","url":"https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg","contentUrl":"https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg","width":4608,"height":3072},{"@type":"BreadcrumbList","@id":"https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://jornalceleiro.com.br/"},{"@type":"ListItem","position":2,"name":"Chegada do verão deixa alerta para água parada"}]},{"@type":"WebSite","@id":"https://jornalceleiro.com.br/#website","url":"https://jornalceleiro.com.br/","name":"Jornal O Celeiro","description":"Jornal de todos!","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://jornalceleiro.com.br/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"pt-BR"},{"@type":"Person","@id":"https://jornalceleiro.com.br/#/schema/person/9c8fec19f3e6dbc6790538f7be6e6db1","name":"Redação","url":"https://jornalceleiro.com.br/author/redacao/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//vlibras.gov.br' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+
+<link rel="alternate" type="application/rss+xml" title="Feed para Jornal O Celeiro &raquo;" href="https://jornalceleiro.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Jornal O Celeiro &raquo;" href="https://jornalceleiro.com.br/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Jornal O Celeiro &raquo; Chegada do verão deixa alerta para água parada" href="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/feed/" />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://jornalceleiro.com.br/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 11px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 32px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--regular: 15px;--wp--preset--font-size--larger: 50px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='slideshow-jquery-image-gallery-stylesheet_functional-css' href='https://jornalceleiro.com.br/wp-content/plugins/slideshow-jquery-image-gallery/style/SlideshowPlugin/functional.css?ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slideshow-jquery-image-gallery-ajax-stylesheet_style-light-css' href='https://jornalceleiro.com.br/wp-admin/admin-ajax.php?action=slideshow_jquery_image_gallery_load_stylesheet&#038;style=style-light&#038;ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slideshow-jquery-image-gallery-ajax-stylesheet_style-dark-css' href='https://jornalceleiro.com.br/wp-admin/admin-ajax.php?action=slideshow_jquery_image_gallery_load_stylesheet&#038;style=style-dark&#038;ver=2.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://jornalceleiro.com.br/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='td-plugin-multi-purpose-css' href='https://jornalceleiro.com.br/wp-content/plugins/td-composer/td-multi-purpose/style.css?ver=3833ae26cf1f9d406448012ce1734aa1' type='text/css' media='all' />
+<link rel='stylesheet' id='td-theme-css' href='https://jornalceleiro.com.br/wp-content/themes/Newspaper/style.css?ver=12.6.2' type='text/css' media='all' />
+<style id='td-theme-inline-css' type='text/css'>@media (max-width:767px){.td-header-desktop-wrap{display:none}}@media (min-width:767px){.td-header-mobile-wrap{display:none}}</style>
+<link rel='stylesheet' id='td-legacy-framework-front-style-css' href='https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/assets/css/td_legacy_main.css?ver=3833ae26cf1f9d406448012ce1734aa1' type='text/css' media='all' />
+<link rel='stylesheet' id='td-standard-pack-framework-front-style-css' href='https://jornalceleiro.com.br/wp-content/plugins/td-standard-pack/Newspaper/assets/css/td_standard_pack_main.css?ver=9c79b36358200da4c4662c5aa9454675' type='text/css' media='all' />
+<link rel='stylesheet' id='tdb_style_cloud_templates_front-css' href='https://jornalceleiro.com.br/wp-content/plugins/td-cloud-library/assets/css/tdb_main.css?ver=34c58173fa732974ccb0ca4df5ede162' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://vlibras.gov.br/app/vlibras-plugin.js?ver=1.0" id="vlibrasjs-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="vlibrasjs-js-after">
+/* <![CDATA[ */
+try{vlibrasjs.load({ async: true });}catch(e){}
+/* ]]> */
+</script>
+<script type="application/json" id="wpp-json">
+
+{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/jornalceleiro.com.br\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/jornalceleiro.com.br\/wp-json\/wordpress-popular-posts","ID":17884,"token":"5d25bc06a7","lang":0,"debug":0}
+
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/wordpress-popular-posts/assets/js/wpp.min.js?ver=6.3.4" id="wpp-js-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+<!-- Snippet do Google Analytics adicionado pelo Site Kit -->
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-T9B277J" id="google_gtagjs-js" async></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["jornalceleiro.com.br"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-T9B277J");
+/* ]]> */
+</script>
+
+<!-- Finalizar o snippet do Google Analytics adicionado pelo Site Kit -->
+<link rel="https://api.w.org/" href="https://jornalceleiro.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://jornalceleiro.com.br/wp-json/wp/v2/posts/17884" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jornalceleiro.com.br/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.3" />
+<link rel='shortlink' href='https://jornalceleiro.com.br/?p=17884' />
+<link rel="alternate" type="application/json+oembed" href="https://jornalceleiro.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://jornalceleiro.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.123.1" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=UA-65325428-1"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65325428-1');
+</script>
+            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+        <script type="rocketlazyloadscript">
+        window.tdb_global_vars = {"wpRestUrl":"https:\/\/jornalceleiro.com.br\/wp-json\/","permalinkStructure":"\/%year%\/%monthnum%\/%postname%\/"};
+        window.tdb_p_autoload_vars = {"isAjax":false,"isAdminBarShowing":false,"autoloadScrollPercent":50,"postAutoloadStatus":"off","origPostEditUrl":null};
+    </script>
+    
+    <style id="tdb-global-colors">:root{--accent-color:#fff}</style>
+	
+<meta name="generator" content="Elementor 3.18.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, e_font_icon_svg, additional_custom_breakpoints, block_editor_assets_optimize, e_image_loading_optimization; settings: css_print_method-external, google_font-enabled, font_display-swap">
+
+<!-- JS generated by theme -->
+
+<script type="rocketlazyloadscript">
+    
+    
+
+	    var tdBlocksArray = []; //here we store all the items for the current page
+
+	    // td_block class - each ajax block uses a object of this class for requests
+	    function tdBlock() {
+		    this.id = '';
+		    this.block_type = 1; //block type id (1-234 etc)
+		    this.atts = '';
+		    this.td_column_number = '';
+		    this.td_current_page = 1; //
+		    this.post_count = 0; //from wp
+		    this.found_posts = 0; //from wp
+		    this.max_num_pages = 0; //from wp
+		    this.td_filter_value = ''; //current live filter value
+		    this.is_ajax_running = false;
+		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+		    this.header_color = '';
+		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+	    }
+
+        // td_js_generator - mini detector
+        ( function () {
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+	        if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+                htmlTag.className += ' ie10';
+            }
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+                htmlTag.className += ' ie11';
+            }
+
+	        if ( navigator.userAgent.indexOf("Edge") > -1 ) {
+                htmlTag.className += ' ieEdge';
+            }
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if ( user_agent.indexOf("android") > -1 ) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+               htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
+                htmlTag.className += ' td-md-is-iemobile';
+            }
+
+        })();
+
+        var tdLocalCache = {};
+
+        ( function () {
+            "use strict";
+
+            tdLocalCache = {
+                data: {},
+                remove: function (resource_id) {
+                    delete tdLocalCache.data[resource_id];
+                },
+                exist: function (resource_id) {
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+                },
+                get: function (resource_id) {
+                    return tdLocalCache.data[resource_id];
+                },
+                set: function (resource_id, cachedData) {
+                    tdLocalCache.remove(resource_id);
+                    tdLocalCache.data[resource_id] = cachedData;
+                }
+            };
+        })();
+
+    
+    
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":228},{"limitBottom":1018,"sidebarWidth":300},{"limitBottom":1140,"sidebarWidth":324}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img, .td-lazy-img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .td-animation-stack .entry-thumb, .post img, .td-animation-stack .td-lazy-img";
+var tds_general_modal_image="yes";
+var tdc_is_installed="yes";
+var td_ajax_url="https:\/\/jornalceleiro.com.br\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=12.6.2";
+var td_get_template_directory_uri="https:\/\/jornalceleiro.com.br\/wp-content\/plugins\/td-composer\/legacy\/common";
+var tds_snap_menu="smart_snap_always";
+var tds_logo_on_sticky="show_header_logo";
+var tds_header_style="10";
+var td_please_wait="Aguarde...";
+var td_email_user_pass_incorrect="Usu\u00e1rio ou senha incorreta!";
+var td_email_user_incorrect="E-mail ou nome de usu\u00e1rio incorreto!";
+var td_email_incorrect="E-mail incorreto!";
+var td_user_incorrect="Username incorrect!";
+var td_email_user_empty="Email or username empty!";
+var td_pass_empty="Pass empty!";
+var td_pass_pattern_incorrect="Invalid Pass Pattern!";
+var td_retype_pass_incorrect="Retyped Pass incorrect!";
+var tds_more_articles_on_post_enable="show";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_captcha="";
+var tds_theme_color_site_wide="#0a0000";
+var tds_smart_sidebar="enabled";
+var tdThemeName="Newspaper";
+var tdThemeNameWl="Newspaper";
+var td_magnific_popup_translation_tPrev="Anterior (Seta a esquerda )";
+var td_magnific_popup_translation_tNext="Avan\u00e7ar (tecla de seta para a direita)";
+var td_magnific_popup_translation_tCounter="%curr% de %total%";
+var td_magnific_popup_translation_ajax_tError="O conte\u00fado de %url% n\u00e3o pode ser carregado.";
+var td_magnific_popup_translation_image_tError="A imagem #%curr% n\u00e3o pode ser carregada.";
+var tdBlockNonce="6b591719e0";
+var tdMobileMenu="enabled";
+var tdMobileSearch="enabled";
+var tdDateNamesI18n={"month_names":["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"month_names_short":["jan","fev","mar","abr","maio","jun","jul","ago","set","out","nov","dez"],"day_names":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"day_names_short":["dom","seg","ter","qua","qui","sex","s\u00e1b"]};
+var tdb_modal_confirm="Save";
+var tdb_modal_cancel="Cancel";
+var tdb_modal_confirm_alt="Yes";
+var tdb_modal_cancel_alt="No";
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>.td-menu-background,.td-search-background{background-image:url('http://jornalceleiro.com.br/wp-content/uploads/2020/02/8-1.jpg')}:root{--td_theme_color:#0a0000;--td_slider_text:rgba(10,0,0,0.7);--td_container_transparent:transparent;--td_header_color:#095ba7;--td_mobile_menu_color:#095ba7;--td_mobile_gradient_one_mob:#095ba7;--td_mobile_gradient_two_mob:#0087ca;--td_mobile_text_active_color:#095ba7;--td_mobile_button_color_mob:#095ba7;--td_login_hover_background:#000000}.td-header-style-12 .td-header-menu-wrap-full,.td-header-style-12 .td-affix,.td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category,.td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category,.td_category_template_3 .td-current-sub-category,.td_category_template_8 .td-category-header .td-category a.td-current-sub-category,.td_category_template_4 .td-category-siblings .td-category a:hover,.td_block_big_grid_9.td-grid-style-1 .td-post-category,.td_block_big_grid_9.td-grid-style-5 .td-post-category,.td-grid-style-6.td-hover-1 .td-module-thumb:after,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-menu-item>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>li>a:hover,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.sfHover>a{background-color:#0a0000}.td_mega_menu_sub_cats .cur-sub-cat,.td-mega-span h3 a:hover,.td_mod_mega_menu:hover .entry-title a,.header-search-wrap .result-msg a:hover,.td-header-top-menu .td-drop-down-search .td_module_wrap:hover .entry-title a,.td-header-top-menu .td-icon-search:hover,.td-header-wrap .result-msg a:hover,.top-header-menu li a:hover,.top-header-menu .current-menu-item>a,.top-header-menu .current-menu-ancestor>a,.top-header-menu .current-category-ancestor>a,.td-social-icon-wrap>a:hover,.td-header-sp-top-widget .td-social-icon-wrap a:hover,.td_mod_related_posts:hover h3>a,.td-post-template-11 .td-related-title .td-related-left:hover,.td-post-template-11 .td-related-title .td-related-right:hover,.td-post-template-11 .td-related-title .td-cur-simple-item,.td-post-template-11 .td_block_related_posts .td-next-prev-wrap a:hover,.td-category-header .td-pulldown-category-filter-link:hover,.td-category-siblings .td-subcat-dropdown a:hover,.td-category-siblings .td-subcat-dropdown a.td-current-sub-category,.footer-text-wrap .footer-email-wrap a,.footer-social-wrap a:hover,.td_module_17 .td-read-more a:hover,.td_module_18 .td-read-more a:hover,.td_module_19 .td-post-author-name a:hover,.td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more span,.td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more i,.td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more span,.td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more i,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-menu-item>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.sfHover>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>li>a:hover{color:#0a0000}.td-mega-menu-page .wpb_content_element ul li a:hover,.td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,.td-theme-wrap .header-search-wrap .result-msg a:hover{color:#0a0000!important}.td_category_template_8 .td-category-header .td-category a.td-current-sub-category,.td_category_template_4 .td-category-siblings .td-category a:hover,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-menu-item>a,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style4 .tdm-header .sf-menu>li>a:hover,.tdm-menu-active-style4 .tdm-header .sf-menu>.sfHover>a{border-color:#0a0000}.td-header-wrap .td-header-menu-wrap-full,.td-header-menu-wrap.td-affix,.td-header-style-3 .td-header-main-menu,.td-header-style-3 .td-affix .td-header-main-menu,.td-header-style-4 .td-header-main-menu,.td-header-style-4 .td-affix .td-header-main-menu,.td-header-style-8 .td-header-menu-wrap.td-affix,.td-header-style-8 .td-header-top-menu-full{background-color:#095ba7}.td-boxed-layout .td-header-style-3 .td-header-menu-wrap,.td-boxed-layout .td-header-style-4 .td-header-menu-wrap,.td-header-style-3 .td_stretch_content .td-header-menu-wrap,.td-header-style-4 .td_stretch_content .td-header-menu-wrap{background-color:#095ba7!important}@media (min-width:1019px){.td-header-style-1 .td-header-sp-recs,.td-header-style-1 .td-header-sp-logo{margin-bottom:28px}}@media (min-width:768px) and (max-width:1018px){.td-header-style-1 .td-header-sp-recs,.td-header-style-1 .td-header-sp-logo{margin-bottom:14px}}.td-header-style-7 .td-header-top-menu{border-bottom:none}.td-header-wrap .td-header-menu-wrap .sf-menu>li>a,.td-header-wrap .td-header-menu-social .td-social-icon-wrap a,.td-header-style-4 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-5 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-6 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-12 .td-header-menu-social .td-social-icon-wrap i,.td-header-wrap .header-search-wrap #td-header-search-button .td-icon-search{color:#ffffff}.td-header-wrap .td-header-menu-social+.td-search-wrapper #td-header-search-button:before{background-color:#ffffff}.td-affix .sf-menu>.current-menu-item>a:after,.td-affix .sf-menu>.current-menu-ancestor>a:after,.td-affix .sf-menu>.current-category-ancestor>a:after,.td-affix .sf-menu>li:hover>a:after,.td-affix .sf-menu>.sfHover>a:after,.td-header-wrap .td-affix .black-menu .sf-menu>li>a:hover,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-ancestor>a,.td-header-wrap .td-affix .black-menu .sf-menu>.sfHover>a,.td-affix .header-search-wrap .td-drop-down-search:after,.td-affix .header-search-wrap .td-drop-down-search .btn:hover,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-item>a,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-ancestor>a,.td-header-wrap .td-affix .black-menu .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>li>a:hover,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.sfHover>a{background-color:#095ba7}.td-affix .header-search-wrap .td-drop-down-search:before{border-color:transparent transparent #095ba7 transparent}.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>li>a:hover,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.sfHover>a{border-color:#095ba7}.td-theme-wrap .td-affix .sf-menu ul .td-menu-item>a:hover,.td-theme-wrap .td-affix .sf-menu ul .sfHover>a,.td-theme-wrap .td-affix .sf-menu ul .current-menu-ancestor>a,.td-theme-wrap .td-affix .sf-menu ul .current-category-ancestor>a,.td-theme-wrap .td-affix .sf-menu ul .current-menu-item>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>li>a:hover,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.sfHover>a{color:#095ba7}.td-theme-wrap .td_mod_mega_menu:hover .entry-title a,.td-theme-wrap .sf-menu .td_mega_menu_sub_cats .cur-sub-cat{color:#000000}.td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover,.td-theme-wrap .td-mega-menu .td-next-prev-wrap a:hover{background-color:#000000}.td-theme-wrap .td-mega-menu .td-next-prev-wrap a:hover{border-color:#000000}.td-theme-wrap .header-search-wrap .td-drop-down-search .btn:hover,.td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,.td-theme-wrap .header-search-wrap .result-msg a:hover{color:#000000!important}.td-header-wrap .td-logo-text-container .td-logo-text{color:#095ba7}.td-header-wrap .td-logo-text-container .td-tagline-text{color:#095ba7}.td-theme-wrap .sf-menu .td-normal-menu .sub-menu{background-color:#095ba7}.td-theme-wrap .sf-menu .td-normal-menu .sub-menu .td-menu-item>a{color:#ffffff}.td-theme-wrap .sf-menu .td-normal-menu .td-menu-item>a:hover,.td-theme-wrap .sf-menu .td-normal-menu .sfHover>a,.td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor>a,.td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor>a,.td-theme-wrap .sf-menu .td-normal-menu .current-menu-item>a{color:#ffffff}.td-footer-wrapper,.td-footer-wrapper .td_block_template_7 .td-block-title>*,.td-footer-wrapper .td_block_template_17 .td-block-title,.td-footer-wrapper .td-block-title-wrap .td-wrapper-pulldown-filter{background-color:#111111}.td-sub-footer-container{background-color:#0c0c0c}.td-footer-wrapper::before{background-image:url('http://jornalceleiro.com.br/wp-content/uploads/2020/02/8-1.jpg')}.td-footer-wrapper::before{background-size:cover}.td-footer-wrapper::before{background-position:center center}.td-footer-wrapper::before{opacity:0.1}.td-post-template-1 .td-post-header .entry-title{font-weight:600}.td-post-template-2 .td-post-header .entry-title{font-weight:600}.td-post-template-3 .td-post-header .entry-title{font-weight:600}.td-menu-background,.td-search-background{background-image:url('http://jornalceleiro.com.br/wp-content/uploads/2020/02/8-1.jpg')}:root{--td_theme_color:#0a0000;--td_slider_text:rgba(10,0,0,0.7);--td_container_transparent:transparent;--td_header_color:#095ba7;--td_mobile_menu_color:#095ba7;--td_mobile_gradient_one_mob:#095ba7;--td_mobile_gradient_two_mob:#0087ca;--td_mobile_text_active_color:#095ba7;--td_mobile_button_color_mob:#095ba7;--td_login_hover_background:#000000}.td-header-style-12 .td-header-menu-wrap-full,.td-header-style-12 .td-affix,.td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category,.td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category,.td_category_template_3 .td-current-sub-category,.td_category_template_8 .td-category-header .td-category a.td-current-sub-category,.td_category_template_4 .td-category-siblings .td-category a:hover,.td_block_big_grid_9.td-grid-style-1 .td-post-category,.td_block_big_grid_9.td-grid-style-5 .td-post-category,.td-grid-style-6.td-hover-1 .td-module-thumb:after,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-menu-item>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>li>a:hover,.tdm-menu-active-style5 .td-header-menu-wrap .sf-menu>.sfHover>a{background-color:#0a0000}.td_mega_menu_sub_cats .cur-sub-cat,.td-mega-span h3 a:hover,.td_mod_mega_menu:hover .entry-title a,.header-search-wrap .result-msg a:hover,.td-header-top-menu .td-drop-down-search .td_module_wrap:hover .entry-title a,.td-header-top-menu .td-icon-search:hover,.td-header-wrap .result-msg a:hover,.top-header-menu li a:hover,.top-header-menu .current-menu-item>a,.top-header-menu .current-menu-ancestor>a,.top-header-menu .current-category-ancestor>a,.td-social-icon-wrap>a:hover,.td-header-sp-top-widget .td-social-icon-wrap a:hover,.td_mod_related_posts:hover h3>a,.td-post-template-11 .td-related-title .td-related-left:hover,.td-post-template-11 .td-related-title .td-related-right:hover,.td-post-template-11 .td-related-title .td-cur-simple-item,.td-post-template-11 .td_block_related_posts .td-next-prev-wrap a:hover,.td-category-header .td-pulldown-category-filter-link:hover,.td-category-siblings .td-subcat-dropdown a:hover,.td-category-siblings .td-subcat-dropdown a.td-current-sub-category,.footer-text-wrap .footer-email-wrap a,.footer-social-wrap a:hover,.td_module_17 .td-read-more a:hover,.td_module_18 .td-read-more a:hover,.td_module_19 .td-post-author-name a:hover,.td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more span,.td-pulldown-syle-2 .td-subcat-dropdown:hover .td-subcat-more i,.td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more span,.td-pulldown-syle-3 .td-subcat-dropdown:hover .td-subcat-more i,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.current-menu-item>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>.sfHover>a,.tdm-menu-active-style3 .tdm-header.td-header-wrap .sf-menu>li>a:hover{color:#0a0000}.td-mega-menu-page .wpb_content_element ul li a:hover,.td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,.td-theme-wrap .header-search-wrap .result-msg a:hover{color:#0a0000!important}.td_category_template_8 .td-category-header .td-category a.td-current-sub-category,.td_category_template_4 .td-category-siblings .td-category a:hover,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-menu-item>a,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style4 .tdm-header .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style4 .tdm-header .sf-menu>li>a:hover,.tdm-menu-active-style4 .tdm-header .sf-menu>.sfHover>a{border-color:#0a0000}.td-header-wrap .td-header-menu-wrap-full,.td-header-menu-wrap.td-affix,.td-header-style-3 .td-header-main-menu,.td-header-style-3 .td-affix .td-header-main-menu,.td-header-style-4 .td-header-main-menu,.td-header-style-4 .td-affix .td-header-main-menu,.td-header-style-8 .td-header-menu-wrap.td-affix,.td-header-style-8 .td-header-top-menu-full{background-color:#095ba7}.td-boxed-layout .td-header-style-3 .td-header-menu-wrap,.td-boxed-layout .td-header-style-4 .td-header-menu-wrap,.td-header-style-3 .td_stretch_content .td-header-menu-wrap,.td-header-style-4 .td_stretch_content .td-header-menu-wrap{background-color:#095ba7!important}@media (min-width:1019px){.td-header-style-1 .td-header-sp-recs,.td-header-style-1 .td-header-sp-logo{margin-bottom:28px}}@media (min-width:768px) and (max-width:1018px){.td-header-style-1 .td-header-sp-recs,.td-header-style-1 .td-header-sp-logo{margin-bottom:14px}}.td-header-style-7 .td-header-top-menu{border-bottom:none}.td-header-wrap .td-header-menu-wrap .sf-menu>li>a,.td-header-wrap .td-header-menu-social .td-social-icon-wrap a,.td-header-style-4 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-5 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-6 .td-header-menu-social .td-social-icon-wrap i,.td-header-style-12 .td-header-menu-social .td-social-icon-wrap i,.td-header-wrap .header-search-wrap #td-header-search-button .td-icon-search{color:#ffffff}.td-header-wrap .td-header-menu-social+.td-search-wrapper #td-header-search-button:before{background-color:#ffffff}.td-affix .sf-menu>.current-menu-item>a:after,.td-affix .sf-menu>.current-menu-ancestor>a:after,.td-affix .sf-menu>.current-category-ancestor>a:after,.td-affix .sf-menu>li:hover>a:after,.td-affix .sf-menu>.sfHover>a:after,.td-header-wrap .td-affix .black-menu .sf-menu>li>a:hover,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-ancestor>a,.td-header-wrap .td-affix .black-menu .sf-menu>.sfHover>a,.td-affix .header-search-wrap .td-drop-down-search:after,.td-affix .header-search-wrap .td-drop-down-search .btn:hover,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-item>a,.td-header-wrap .td-affix .black-menu .sf-menu>.current-menu-ancestor>a,.td-header-wrap .td-affix .black-menu .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>li>a:hover,.tdm-menu-active-style5 .tdm-header .td-header-menu-wrap.td-affix .sf-menu>.sfHover>a{background-color:#095ba7}.td-affix .header-search-wrap .td-drop-down-search:before{border-color:transparent transparent #095ba7 transparent}.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>li>a:hover,.tdm-menu-active-style4 .tdm-header .td-affix .sf-menu>.sfHover>a{border-color:#095ba7}.td-theme-wrap .td-affix .sf-menu ul .td-menu-item>a:hover,.td-theme-wrap .td-affix .sf-menu ul .sfHover>a,.td-theme-wrap .td-affix .sf-menu ul .current-menu-ancestor>a,.td-theme-wrap .td-affix .sf-menu ul .current-category-ancestor>a,.td-theme-wrap .td-affix .sf-menu ul .current-menu-item>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-menu-item>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-menu-ancestor>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.current-category-ancestor>a,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>li>a:hover,.tdm-menu-active-style3 .tdm-header .td-affix .sf-menu>.sfHover>a{color:#095ba7}.td-theme-wrap .td_mod_mega_menu:hover .entry-title a,.td-theme-wrap .sf-menu .td_mega_menu_sub_cats .cur-sub-cat{color:#000000}.td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover,.td-theme-wrap .td-mega-menu .td-next-prev-wrap a:hover{background-color:#000000}.td-theme-wrap .td-mega-menu .td-next-prev-wrap a:hover{border-color:#000000}.td-theme-wrap .header-search-wrap .td-drop-down-search .btn:hover,.td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,.td-theme-wrap .header-search-wrap .result-msg a:hover{color:#000000!important}.td-header-wrap .td-logo-text-container .td-logo-text{color:#095ba7}.td-header-wrap .td-logo-text-container .td-tagline-text{color:#095ba7}.td-theme-wrap .sf-menu .td-normal-menu .sub-menu{background-color:#095ba7}.td-theme-wrap .sf-menu .td-normal-menu .sub-menu .td-menu-item>a{color:#ffffff}.td-theme-wrap .sf-menu .td-normal-menu .td-menu-item>a:hover,.td-theme-wrap .sf-menu .td-normal-menu .sfHover>a,.td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor>a,.td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor>a,.td-theme-wrap .sf-menu .td-normal-menu .current-menu-item>a{color:#ffffff}.td-footer-wrapper,.td-footer-wrapper .td_block_template_7 .td-block-title>*,.td-footer-wrapper .td_block_template_17 .td-block-title,.td-footer-wrapper .td-block-title-wrap .td-wrapper-pulldown-filter{background-color:#111111}.td-sub-footer-container{background-color:#0c0c0c}.td-footer-wrapper::before{background-image:url('http://jornalceleiro.com.br/wp-content/uploads/2020/02/8-1.jpg')}.td-footer-wrapper::before{background-size:cover}.td-footer-wrapper::before{background-position:center center}.td-footer-wrapper::before{opacity:0.1}.td-post-template-1 .td-post-header .entry-title{font-weight:600}.td-post-template-2 .td-post-header .entry-title{font-weight:600}.td-post-template-3 .td-post-header .entry-title{font-weight:600}</style>
+
+
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "WebSite",
+                    "@id": "https://jornalceleiro.com.br/",
+                    "name": "Início"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                    "item": {
+                    "@type": "WebPage",
+                    "@id": "https://jornalceleiro.com.br/category/saude/",
+                    "name": "Saúde"
+                }
+            }
+            ,{
+                "@type": "ListItem",
+                "position": 3,
+                    "item": {
+                    "@type": "WebPage",
+                    "@id": "https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/",
+                    "name": "Chegada do verão deixa alerta para água parada"                                
+                }
+            }    
+        ]
+    }
+</script>
+<link rel="icon" href="https://jornalceleiro.com.br/wp-content/uploads/2024/01/cropped-WhatsApp-Image-2024-01-02-at-14.42.10-32x32.jpeg" sizes="32x32" />
+<link rel="icon" href="https://jornalceleiro.com.br/wp-content/uploads/2024/01/cropped-WhatsApp-Image-2024-01-02-at-14.42.10-192x192.jpeg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://jornalceleiro.com.br/wp-content/uploads/2024/01/cropped-WhatsApp-Image-2024-01-02-at-14.42.10-180x180.jpeg" />
+<meta name="msapplication-TileImage" content="https://jornalceleiro.com.br/wp-content/uploads/2024/01/cropped-WhatsApp-Image-2024-01-02-at-14.42.10-270x270.jpeg" />
+
+<!-- Button style compiled by theme -->
+
+<style>.tdm-btn-style1{background-color:#0a0000}.tdm-btn-style2:before{border-color:#0a0000}.tdm-btn-style2{color:#0a0000}.tdm-btn-style3{-webkit-box-shadow:0 2px 16px #0a0000;-moz-box-shadow:0 2px 16px #0a0000;box-shadow:0 2px 16px #0a0000}.tdm-btn-style3:hover{-webkit-box-shadow:0 4px 26px #0a0000;-moz-box-shadow:0 4px 26px #0a0000;box-shadow:0 4px 26px #0a0000}</style>
+
+	<style id="tdw-css-placeholder">.stepxmrexhzvsrlxfkuo{}.step4636435346{}var a=1;var b=2;var c=4;</style><style id="wpforms-css-vars-root">
+				:root {
+					--wpforms-field-border-radius: 3px;
+--wpforms-field-background-color: #ffffff;
+--wpforms-field-border-color: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-text-color: rgba( 0, 0, 0, 0.7 );
+--wpforms-label-color: rgba( 0, 0, 0, 0.85 );
+--wpforms-label-sublabel-color: rgba( 0, 0, 0, 0.55 );
+--wpforms-label-error-color: #d63637;
+--wpforms-button-border-radius: 3px;
+--wpforms-button-background-color: #066aab;
+--wpforms-button-text-color: #ffffff;
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+
+				}
+			</style></head>
+
+<body class="post-template-default single single-post postid-17884 single-format-standard td-standard-pack chegada-do-verao-deixa-alerta-para-agua-parada global-block-template-1 elementor-default elementor-kit-62992 td-animation-stack-type0 td-full-layout" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+            <div class="td-scroll-up  td-hide-scroll-up-on-mob" style="display:none;"><i class="td-icon-menu-up"></i></div>
+    
+    <div class="td-menu-background" style="visibility:hidden"></div>
+<div id="td-mobile-nav" style="visibility:hidden">
+    <div class="td-mobile-container">
+        <!-- mobile menu top section -->
+        <div class="td-menu-socials-wrap">
+            <!-- socials -->
+            <div class="td-menu-socials">
+                
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.facebook.com/jornal.oceleiro/" title="Facebook">
+                <i class="td-icon-font td-icon-facebook"></i>
+                <span style="display: none">Facebook</span>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="http://instagram.com/jornaloceleiro" title="Instagram">
+                <i class="td-icon-font td-icon-instagram"></i>
+                <span style="display: none">Instagram</span>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.youtube.com/channel/UCUYolrWfFPP8oWK6r5TQnYw?view_as=subscriber" title="Youtube">
+                <i class="td-icon-font td-icon-youtube"></i>
+                <span style="display: none">Youtube</span>
+            </a>
+        </span>            </div>
+            <!-- close button -->
+            <div class="td-mobile-close">
+                <span><i class="td-icon-close-mobile"></i></span>
+            </div>
+        </div>
+
+        <!-- login section -->
+        
+        <!-- menu section -->
+        <div class="td-mobile-content">
+            <div class="menu-main-menu-container"><ul id="menu-main-menu" class="td-mobile-main-menu"><li id="menu-item-635" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-first menu-item-635"><a href="http://jornalceleiro.com.br">Home</a></li>
+<li id="menu-item-1449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1449"><a href="https://jornalceleiro.com.br/noticias/">Editorias<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-707" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-707"><a href="https://jornalceleiro.com.br/category/agronegocio/">Agronegócio</a></li>
+	<li id="menu-item-27890" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27890"><a href="https://jornalceleiro.com.br/category/comunidade/">Comunidade</a></li>
+	<li id="menu-item-11891" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11891"><a href="https://jornalceleiro.com.br/category/cultura/">Cultura</a></li>
+	<li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-739"><a href="https://jornalceleiro.com.br/category/educacao/">Educação</a></li>
+	<li id="menu-item-29222" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29222"><a href="https://jornalceleiro.com.br/category/empresarial/">Empresarial</a></li>
+	<li id="menu-item-40241" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40241"><a href="https://jornalceleiro.com.br/category/especial/">Especial</a></li>
+	<li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-740"><a href="https://jornalceleiro.com.br/category/esporte/">Esporte</a></li>
+	<li id="menu-item-7805" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7805"><a href="https://jornalceleiro.com.br/category/politica/">Política</a></li>
+	<li id="menu-item-19244" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-19244"><a href="https://jornalceleiro.com.br/category/regiao/">Região</a></li>
+	<li id="menu-item-742" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-742"><a href="https://jornalceleiro.com.br/category/saude/">Saúde</a></li>
+	<li id="menu-item-35175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35175"><a href="https://jornalceleiro.com.br/category/saude/coronavirus-covid-19/">Coronavírus (COVID-19)</a></li>
+	<li id="menu-item-743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-743"><a href="https://jornalceleiro.com.br/category/seguranca/">Segurança</a></li>
+</ul>
+</li>
+<li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-741"><a href="https://jornalceleiro.com.br/category/opiniao/">Opinião<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-755" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-755"><a href="https://jornalceleiro.com.br/category/opiniao/artigos/">Artigos</a></li>
+	<li id="menu-item-737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-737"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/">Colunistas<i class="td-icon-menu-right td-element-after"></i></a>
+	<ul class="sub-menu">
+		<li id="menu-item-46168" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46168"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/cuidados-com-pets/">Cuidados com Pets</a></li>
+		<li id="menu-item-31772" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31772"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/direito-ambiental/">Direito Ambiental</a></li>
+		<li id="menu-item-46170" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46170"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/direito-em-desenvolvimento/">Direito em Desenvolvimento</a></li>
+		<li id="menu-item-38821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38821"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/evoluir/">Evoluir Empresarial</a></li>
+		<li id="menu-item-51958" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51958"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/oab-em-destaque/">OAB em Destaque</a></li>
+		<li id="menu-item-46160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-46160"><a href="#">Outras Colunas<i class="td-icon-menu-right td-element-after"></i></a>
+		<ul class="sub-menu">
+			<li id="menu-item-46524" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46524"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/academia-da-moeda/">Academia da Moeda</a></li>
+			<li id="menu-item-46161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46161"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/antonio-gavazzoni/">Antonio Gavazzoni</a></li>
+			<li id="menu-item-59004" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59004"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/bem-estar/">Bem-estar</a></li>
+			<li id="menu-item-46162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46162"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/camilo-dorneles/">Camilo Dorneles</a></li>
+			<li id="menu-item-38783" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38783"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/comportamento-humano/">Comportamento Humano</a></li>
+			<li id="menu-item-753" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-753"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/coluna-de-moda/">Coluna de Moda</a></li>
+			<li id="menu-item-30813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30813"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/contabilidade-consultiva/">Contabilidade Consultiva</a></li>
+			<li id="menu-item-46164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46164"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/coluna-livre/">Coluna Livre</a></li>
+			<li id="menu-item-46165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46165"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/colunista-magrass/">Colunista Magrass</a></li>
+			<li id="menu-item-46171" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46171"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/dri-dalazen/">Dri Dalazen</a></li>
+			<li id="menu-item-46172" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46172"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/espaco-jovem/">Espaço Jovem</a></li>
+			<li id="menu-item-46174" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46174"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/fabricio-carvalho/">Fabrício Carvalho</a></li>
+			<li id="menu-item-46175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46175"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/mauricio-azevedo/">Mauricio Azevedo</a></li>
+			<li id="menu-item-36253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36253"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/poder-sc/">Poder SC</a></li>
+			<li id="menu-item-46177" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46177"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/simone-tavares/">Simone Tavares</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li id="menu-item-756" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-756"><a href="https://jornalceleiro.com.br/category/opiniao/editorial/">Editorial</a></li>
+	<li id="menu-item-63404" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63404"><a href="https://jornalceleiro.com.br/category/opiniao/pauta/">Pauta</a></li>
+</ul>
+</li>
+<li id="menu-item-59003" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-59003"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/">Publicitários<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-59006" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-59006"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/corpo-e-movimento/">Corpo e Movimento</a></li>
+</ul>
+</li>
+<li id="menu-item-34245" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34245"><a href="#">Sobre nós<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-757"><a href="https://jornalceleiro.com.br/contato/">Expediente</a></li>
+	<li id="menu-item-34246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34246"><a href="https://jornalceleiro.com.br/nossa-historia/">Nossa História</a></li>
+</ul>
+</li>
+<li id="menu-item-49118" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-49118"><a href="https://jornalceleiro.com.br/category/publicacoes-legais/">Publicações Legais</a></li>
+<li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="https://jornalceleiro.com.br/fale-com-a-redacao/">Contato</a></li>
+</ul></div>        </div>
+    </div>
+
+    <!-- register/login section -->
+    </div><div class="td-search-background" style="visibility:hidden"></div>
+<div class="td-search-wrap-mob" style="visibility:hidden">
+	<div class="td-drop-down-search">
+		<form method="get" class="td-search-form" action="https://jornalceleiro.com.br/">
+			<!-- close button -->
+			<div class="td-search-close">
+				<span><i class="td-icon-close-mobile"></i></span>
+			</div>
+			<div role="search" class="td-search-input">
+				<span>Buscar</span>
+				<input id="td-header-search-mob" type="text" value="" name="s" autocomplete="off" />
+			</div>
+		</form>
+		<div id="td-aj-search-mob" class="td-ajax-search-flex"></div>
+	</div>
+</div>
+
+    <div id="td-outer-wrap" class="td-theme-wrap">
+    
+        
+            <div class="tdc-header-wrap ">
+
+            <!--
+Header style 10
+-->
+
+<div class="td-header-wrap td-header-style-10 ">
+    
+    
+    <div class="td-banner-wrap-full td-logo-wrap-full td-logo-mobile-loaded td-container-wrap ">
+        <div class="td-header-sp-logo">
+            		<a class="td-main-logo" href="https://jornalceleiro.com.br/">
+			<img class="td-retina-data"  data-retina="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" alt="Jornal O Celeiro" title="Jornal O Celeiro" />
+			<span class="td-visual-hidden">Jornal O Celeiro</span>
+		</a>
+	        </div>
+    </div>
+
+	<div class="td-header-menu-wrap-full td-container-wrap ">
+        
+        <div class="td-header-menu-wrap td-header-gradient td-header-menu-no-search">
+			<div class="td-container td-header-row td-header-main-menu">
+				<div id="td-header-menu" role="navigation">
+        <div id="td-top-mobile-toggle"><a href="#" role="button" aria-label="Menu"><i class="td-icon-font td-icon-mobile"></i></a></div>
+        <div class="td-main-menu-logo td-logo-in-header">
+        		<a class="td-mobile-logo td-sticky-header" aria-label="Logo" href="https://jornalceleiro.com.br/">
+			<img class="td-retina-data" data-retina="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-branca-300x93.png" src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-branca-300x93.png" alt="Jornal O Celeiro" title="Jornal O Celeiro" />
+		</a>
+			<a class="td-header-logo td-sticky-header" aria-label="Logo" href="https://jornalceleiro.com.br/">
+			<img class="td-retina-data" data-retina="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" alt="Jornal O Celeiro" title="Jornal O Celeiro" />
+		</a>
+	    </div>
+    <div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="sf-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-first td-menu-item td-normal-menu menu-item-635"><a href="http://jornalceleiro.com.br">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children td-menu-item td-normal-menu menu-item-1449"><a href="https://jornalceleiro.com.br/noticias/">Editorias</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-707"><a href="https://jornalceleiro.com.br/category/agronegocio/">Agronegócio</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-27890"><a href="https://jornalceleiro.com.br/category/comunidade/">Comunidade</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-11891"><a href="https://jornalceleiro.com.br/category/cultura/">Cultura</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-739"><a href="https://jornalceleiro.com.br/category/educacao/">Educação</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-29222"><a href="https://jornalceleiro.com.br/category/empresarial/">Empresarial</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-40241"><a href="https://jornalceleiro.com.br/category/especial/">Especial</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-740"><a href="https://jornalceleiro.com.br/category/esporte/">Esporte</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-7805"><a href="https://jornalceleiro.com.br/category/politica/">Política</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-19244"><a href="https://jornalceleiro.com.br/category/regiao/">Região</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent td-menu-item td-normal-menu menu-item-742"><a href="https://jornalceleiro.com.br/category/saude/">Saúde</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-35175"><a href="https://jornalceleiro.com.br/category/saude/coronavirus-covid-19/">Coronavírus (COVID-19)</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-743"><a href="https://jornalceleiro.com.br/category/seguranca/">Segurança</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-741"><a href="https://jornalceleiro.com.br/category/opiniao/">Opinião</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-755"><a href="https://jornalceleiro.com.br/category/opiniao/artigos/">Artigos</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-737"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/">Colunistas</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46168"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/cuidados-com-pets/">Cuidados com Pets</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-31772"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/direito-ambiental/">Direito Ambiental</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46170"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/direito-em-desenvolvimento/">Direito em Desenvolvimento</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-38821"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/evoluir/">Evoluir Empresarial</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-51958"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/oab-em-destaque/">OAB em Destaque</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-46160"><a href="#">Outras Colunas</a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46524"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/academia-da-moeda/">Academia da Moeda</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46161"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/antonio-gavazzoni/">Antonio Gavazzoni</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-59004"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/bem-estar/">Bem-estar</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46162"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/camilo-dorneles/">Camilo Dorneles</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-38783"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/comportamento-humano/">Comportamento Humano</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-753"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/coluna-de-moda/">Coluna de Moda</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-30813"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/contabilidade-consultiva/">Contabilidade Consultiva</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46164"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/coluna-livre/">Coluna Livre</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46165"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/colunista-magrass/">Colunista Magrass</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46171"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/dri-dalazen/">Dri Dalazen</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46172"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/espaco-jovem/">Espaço Jovem</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46174"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/fabricio-carvalho/">Fabrício Carvalho</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46175"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/mauricio-azevedo/">Mauricio Azevedo</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-36253"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/poder-sc/">Poder SC</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-46177"><a href="https://jornalceleiro.com.br/category/opiniao/colunistas/simone-tavares/">Simone Tavares</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-756"><a href="https://jornalceleiro.com.br/category/opiniao/editorial/">Editorial</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-63404"><a href="https://jornalceleiro.com.br/category/opiniao/pauta/">Pauta</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-59003"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/">Publicitários</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-59006"><a href="https://jornalceleiro.com.br/category/espacos-publicitarios/corpo-e-movimento/">Corpo e Movimento</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-34245"><a href="#">Sobre nós</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-757"><a href="https://jornalceleiro.com.br/contato/">Expediente</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-34246"><a href="https://jornalceleiro.com.br/nossa-historia/">Nossa História</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-49118"><a href="https://jornalceleiro.com.br/category/publicacoes-legais/">Publicações Legais</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-747"><a href="https://jornalceleiro.com.br/fale-com-a-redacao/">Contato</a></li>
+</ul></div></div>
+
+
+    <div class="td-search-wrapper">
+        <div id="td-top-search">
+            <!-- Search -->
+            <div class="header-search-wrap">
+                <div class="dropdown header-search">
+                    <a id="td-header-search-button-mob" href="#" role="button" aria-label="Search" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+			</div>
+		</div>
+	</div>
+
+            <div class="td-banner-wrap-full td-banner-bg td-container-wrap ">
+            <div class="td-container-header td-header-row td-header-header">
+                <div class="td-header-sp-recs">
+                    <div class="td-header-rec-wrap">
+    <div class="td-a-rec td-a-rec-id-header  td-a-rec-no-translate tdi_1 td_block_template_1">
+<style>.tdi_1.td-a-rec{text-align:center}.tdi_1.td-a-rec:not(.td-a-rec-no-translate){transform:translateZ(0)}.tdi_1 .td-element-style{z-index:-1}.tdi_1.td-a-rec-img{text-align:left}.tdi_1.td-a-rec-img img{margin:0 auto 0 0}@media (max-width:767px){.tdi_1.td-a-rec-img{text-align:center}}</style><div class="td-all-devices">
+<a target="_blank"  href="https://www.guiamultiplo.com.br/"> <img src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/TAMANHOS2.png">  </a> 
+</div></div>
+</div>                </div>
+            </div>
+        </div>
+    
+</div>
+            </div>
+
+            
+    <div class="td-main-content-wrap td-container-wrap">
+
+        <div class="td-container td-post-template-default ">
+            <div class="td-crumb-container"><div class="entry-crumbs"><span><a title="" class="entry-crumb" href="https://jornalceleiro.com.br/">Início</a></span> <i class="td-icon-right td-bread-sep"></i> <span><a title="Ver todos os artigos em Saúde" class="entry-crumb" href="https://jornalceleiro.com.br/category/saude/">Saúde</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Chegada do verão deixa alerta para água parada</span></div></div>
+
+            <div class="td-pb-row">
+                                        <div class="td-pb-span8 td-main-content" role="main">
+                            <div class="td-ss-main-content">
+                                
+    <article id="post-17884" class="post-17884 post type-post status-publish format-standard has-post-thumbnail category-saude category-ultimas-noticias" itemscope itemtype="https://schema.org/Article">
+        <div class="td-post-header">
+
+            <!-- category --><ul class="td-category"><li class="entry-category"><a  href="https://jornalceleiro.com.br/category/saude/">Saúde</a></li><li class="entry-category"><a  href="https://jornalceleiro.com.br/category/ultimas-noticias/">Últimas Notícias</a></li></ul>
+            <header class="td-post-title">
+                <h1 class="entry-title">Chegada do verão deixa alerta para água parada</h1>
+                
+
+                <div class="td-module-meta-info">
+                    <!-- author --><div class="td-post-author-name"><div class="td-author-by">Por</div> <a href="https://jornalceleiro.com.br/author/redacao/">Redação</a><div class="td-author-line"> - </div> </div>                    <!-- date --><span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-12-08T09:12:59-03:00" >8 dezembro, 2017</time></span>                    <!-- comments -->                    <!-- views -->                </div>
+
+            </header>
+
+        </div>
+
+        <div class="td-post-sharing-top"><div id="td_social_sharing_article_top" class="td-post-sharing td-ps-bg td-ps-notext td-post-sharing-style1 ">
+		<style>.td-post-sharing-classic{position:relative;height:20px}.td-post-sharing{margin-left:-3px;margin-right:-3px;font-family:'Open Sans','Open Sans Regular',sans-serif;z-index:2;white-space:nowrap;opacity:0}.td-post-sharing.td-social-show-all{white-space:normal}.td-js-loaded .td-post-sharing{-webkit-transition:opacity 0.3s;transition:opacity 0.3s;opacity:1}.td-post-sharing-classic+.td-post-sharing{margin-top:15px}@media (max-width:767px){.td-post-sharing-classic+.td-post-sharing{margin-top:8px}}.td-post-sharing-top{margin-bottom:30px}@media (max-width:767px){.td-post-sharing-top{margin-bottom:20px}}.td-post-sharing-bottom{border-style:solid;border-color:#ededed;border-width:1px 0;padding:21px 0;margin-bottom:42px}.td-post-sharing-bottom .td-post-sharing{margin-bottom:-7px}.td-post-sharing-visible,.td-social-sharing-hidden{display:inline-block}.td-social-sharing-hidden ul{display:none}.td-social-show-all .td-pulldown-filter-list{display:inline-block}.td-social-network,.td-social-handler{position:relative;display:inline-block;margin:0 3px 7px;height:40px;min-width:40px;font-size:11px;text-align:center;vertical-align:middle}.td-ps-notext .td-social-network .td-social-but-icon,.td-ps-notext .td-social-handler .td-social-but-icon{border-top-right-radius:2px;border-bottom-right-radius:2px}.td-social-network{color:#000;overflow:hidden}.td-social-network .td-social-but-icon{border-top-left-radius:2px;border-bottom-left-radius:2px}.td-social-network .td-social-but-text{border-top-right-radius:2px;border-bottom-right-radius:2px}.td-social-network:hover{opacity:0.8!important}.td-social-handler{color:#444;border:1px solid #e9e9e9;border-radius:2px}.td-social-handler .td-social-but-text{font-weight:700}.td-social-handler .td-social-but-text:before{background-color:#000;opacity:0.08}.td-social-share-text{margin-right:18px}.td-social-share-text:before,.td-social-share-text:after{content:'';position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:100%;width:0;height:0;border-style:solid}.td-social-share-text:before{border-width:9px 0 9px 11px;border-color:transparent transparent transparent #e9e9e9}.td-social-share-text:after{border-width:8px 0 8px 10px;border-color:transparent transparent transparent #fff}.td-social-but-text,.td-social-but-icon{display:inline-block;position:relative}.td-social-but-icon{padding-left:13px;padding-right:13px;line-height:40px;z-index:1}.td-social-but-icon i{position:relative;top:-1px;vertical-align:middle}.td-social-but-text{margin-left:-6px;padding-left:12px;padding-right:17px;line-height:40px}.td-social-but-text:before{content:'';position:absolute;top:12px;left:0;width:1px;height:16px;background-color:#fff;opacity:0.2;z-index:1}.td-social-handler i,.td-social-facebook i,.td-social-reddit i,.td-social-linkedin i,.td-social-tumblr i,.td-social-stumbleupon i,.td-social-vk i,.td-social-viber i,.td-social-flipboard i,.td-social-koo i{font-size:14px}.td-social-telegram i{font-size:16px}.td-social-mail i,.td-social-line i,.td-social-print i{font-size:15px}.td-social-handler .td-icon-share{top:-1px;left:-1px}.td-social-twitter .td-icon-twitter{font-size:14px}.td-social-pinterest .td-icon-pinterest{font-size:13px}.td-social-whatsapp .td-icon-whatsapp,.td-social-kakao .td-icon-kakao{font-size:18px}.td-social-kakao .td-icon-kakao:before{color:#3C1B1D}.td-social-reddit .td-social-but-icon{padding-right:12px}.td-social-reddit .td-icon-reddit{left:-1px}.td-social-telegram .td-social-but-icon{padding-right:12px}.td-social-telegram .td-icon-telegram{left:-1px}.td-social-stumbleupon .td-social-but-icon{padding-right:11px}.td-social-stumbleupon .td-icon-stumbleupon{left:-2px}.td-social-digg .td-social-but-icon{padding-right:11px}.td-social-digg .td-icon-digg{left:-2px;font-size:17px}.td-social-vk .td-social-but-icon{padding-right:11px}.td-social-vk .td-icon-vk{left:-2px}.td-social-naver .td-icon-naver{left:-1px;font-size:16px}.td-social-gettr .td-icon-gettr{font-size:25px}.td-ps-notext .td-social-gettr .td-icon-gettr{left:-5px}.td-social-copy_url{position:relative}.td-social-copy_url-check{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:0;pointer-events:none;transition:opacity .2s ease-in-out;z-index:11}.td-social-copy_url .td-icon-copy_url{left:-1px;font-size:17px}.td-social-copy_url-disabled{pointer-events:none}.td-social-copy_url-disabled .td-icon-copy_url{opacity:0}.td-social-copy_url-copied .td-social-copy_url-check{opacity:1}@keyframes social_copy_url_loader{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.td-social-expand-tabs i{top:-2px;left:-1px;font-size:16px}@media (min-width:767px){.td-social-line,.td-social-viber{display:none}}.td-ps-bg .td-social-network{color:#fff}.td-ps-bg .td-social-facebook .td-social-but-icon,.td-ps-bg .td-social-facebook .td-social-but-text{background-color:#516eab}.td-ps-bg .td-social-twitter .td-social-but-icon,.td-ps-bg .td-social-twitter .td-social-but-text{background-color:#29c5f6}.td-ps-bg .td-social-pinterest .td-social-but-icon,.td-ps-bg .td-social-pinterest .td-social-but-text{background-color:#ca212a}.td-ps-bg .td-social-whatsapp .td-social-but-icon,.td-ps-bg .td-social-whatsapp .td-social-but-text{background-color:#7bbf6a}.td-ps-bg .td-social-reddit .td-social-but-icon,.td-ps-bg .td-social-reddit .td-social-but-text{background-color:#f54200}.td-ps-bg .td-social-mail .td-social-but-icon,.td-ps-bg .td-social-digg .td-social-but-icon,.td-ps-bg .td-social-copy_url .td-social-but-icon,.td-ps-bg .td-social-mail .td-social-but-text,.td-ps-bg .td-social-digg .td-social-but-text,.td-ps-bg .td-social-copy_url .td-social-but-text{background-color:#000}.td-ps-bg .td-social-print .td-social-but-icon,.td-ps-bg .td-social-print .td-social-but-text{background-color:#333}.td-ps-bg .td-social-linkedin .td-social-but-icon,.td-ps-bg .td-social-linkedin .td-social-but-text{background-color:#0266a0}.td-ps-bg .td-social-tumblr .td-social-but-icon,.td-ps-bg .td-social-tumblr .td-social-but-text{background-color:#3e5a70}.td-ps-bg .td-social-telegram .td-social-but-icon,.td-ps-bg .td-social-telegram .td-social-but-text{background-color:#179cde}.td-ps-bg .td-social-stumbleupon .td-social-but-icon,.td-ps-bg .td-social-stumbleupon .td-social-but-text{background-color:#ee4813}.td-ps-bg .td-social-vk .td-social-but-icon,.td-ps-bg .td-social-vk .td-social-but-text{background-color:#4c75a3}.td-ps-bg .td-social-line .td-social-but-icon,.td-ps-bg .td-social-line .td-social-but-text{background-color:#00b900}.td-ps-bg .td-social-viber .td-social-but-icon,.td-ps-bg .td-social-viber .td-social-but-text{background-color:#5d54a4}.td-ps-bg .td-social-naver .td-social-but-icon,.td-ps-bg .td-social-naver .td-social-but-text{background-color:#3ec729}.td-ps-bg .td-social-flipboard .td-social-but-icon,.td-ps-bg .td-social-flipboard .td-social-but-text{background-color:#f42827}.td-ps-bg .td-social-kakao .td-social-but-icon,.td-ps-bg .td-social-kakao .td-social-but-text{background-color:#f9e000}.td-ps-bg .td-social-gettr .td-social-but-icon,.td-ps-bg .td-social-gettr .td-social-but-text{background-color:#fc223b}.td-ps-bg .td-social-koo .td-social-but-icon,.td-ps-bg .td-social-koo .td-social-but-text{background-color:#facd00}.td-ps-dark-bg .td-social-network{color:#fff}.td-ps-dark-bg .td-social-network .td-social-but-icon,.td-ps-dark-bg .td-social-network .td-social-but-text{background-color:#000}.td-ps-border .td-social-network .td-social-but-icon,.td-ps-border .td-social-network .td-social-but-text{line-height:38px;border-width:1px;border-style:solid}.td-ps-border .td-social-network .td-social-but-text{border-left-width:0}.td-ps-border .td-social-network .td-social-but-text:before{background-color:#000;opacity:0.08}.td-ps-border.td-ps-padding .td-social-network .td-social-but-icon{border-right-width:0}.td-ps-border.td-ps-padding .td-social-network.td-social-expand-tabs .td-social-but-icon{border-right-width:1px}.td-ps-border-grey .td-social-but-icon,.td-ps-border-grey .td-social-but-text{border-color:#e9e9e9}.td-ps-border-colored .td-social-facebook .td-social-but-icon,.td-ps-border-colored .td-social-facebook .td-social-but-text{border-color:#516eab}.td-ps-border-colored .td-social-twitter .td-social-but-icon,div.td-ps-border-colored .td-social-twitter .td-social-but-text{border-color:#29c5f6;color:#29c5f6}.td-ps-border-colored .td-social-pinterest .td-social-but-icon,.td-ps-border-colored .td-social-pinterest .td-social-but-text{border-color:#ca212a}.td-ps-border-colored .td-social-whatsapp .td-social-but-icon,.td-ps-border-colored .td-social-whatsapp .td-social-but-text{border-color:#7bbf6a}.td-ps-border-colored .td-social-reddit .td-social-but-icon,.td-ps-border-colored .td-social-reddit .td-social-but-text{border-color:#f54200}.td-ps-border-colored .td-social-mail .td-social-but-icon,.td-ps-border-colored .td-social-digg .td-social-but-icon,.td-ps-border-colored .td-social-copy_url .td-social-but-icon,.td-ps-border-colored .td-social-mail .td-social-but-text,.td-ps-border-colored .td-social-digg .td-social-but-text,.td-ps-border-colored .td-social-copy_url .td-social-but-text{border-color:#000}.td-ps-border-colored .td-social-print .td-social-but-icon,.td-ps-border-colored .td-social-print .td-social-but-text{border-color:#333}.td-ps-border-colored .td-social-linkedin .td-social-but-icon,.td-ps-border-colored .td-social-linkedin .td-social-but-text{border-color:#0266a0}.td-ps-border-colored .td-social-tumblr .td-social-but-icon,.td-ps-border-colored .td-social-tumblr .td-social-but-text{border-color:#3e5a70}.td-ps-border-colored .td-social-telegram .td-social-but-icon,.td-ps-border-colored .td-social-telegram .td-social-but-text{border-color:#179cde}.td-ps-border-colored .td-social-stumbleupon .td-social-but-icon,.td-ps-border-colored .td-social-stumbleupon .td-social-but-text{border-color:#ee4813}.td-ps-border-colored .td-social-vk .td-social-but-icon,.td-ps-border-colored .td-social-vk .td-social-but-text{border-color:#4c75a3}.td-ps-border-colored .td-social-line .td-social-but-icon,.td-ps-border-colored .td-social-line .td-social-but-text{border-color:#00b900}.td-ps-border-colored .td-social-viber .td-social-but-icon,.td-ps-border-colored .td-social-viber .td-social-but-text{border-color:#5d54a4}.td-ps-border-colored .td-social-naver .td-social-but-icon,.td-ps-border-colored .td-social-naver .td-social-but-text{border-color:#3ec729}.td-ps-border-colored .td-social-flipboard .td-social-but-icon,.td-ps-border-colored .td-social-flipboard .td-social-but-text{border-color:#f42827}.td-ps-border-colored .td-social-kakao .td-social-but-icon,.td-ps-border-colored .td-social-kakao .td-social-but-text{border-color:#f9e000}.td-ps-border-colored .td-social-gettr .td-social-but-icon,.td-ps-border-colored .td-social-gettr .td-social-but-text{border-color:#fc223b}.td-ps-border-colored .td-social-koo .td-social-but-icon,.td-ps-border-colored .td-social-koo .td-social-but-text{border-color:#facd00}.td-ps-icon-bg .td-social-but-icon{height:100%;border-color:transparent!important}.td-ps-icon-bg .td-social-network .td-social-but-icon{color:#fff}.td-ps-icon-bg .td-social-facebook .td-social-but-icon{background-color:#516eab}.td-ps-icon-bg .td-social-twitter .td-social-but-icon{background-color:#29c5f6}.td-ps-icon-bg .td-social-pinterest .td-social-but-icon{background-color:#ca212a}.td-ps-icon-bg .td-social-whatsapp .td-social-but-icon{background-color:#7bbf6a}.td-ps-icon-bg .td-social-reddit .td-social-but-icon{background-color:#f54200}.td-ps-icon-bg .td-social-mail .td-social-but-icon,.td-ps-icon-bg .td-social-digg .td-social-but-icon,.td-ps-icon-bg .td-social-copy_url .td-social-but-icon{background-color:#000}.td-ps-icon-bg .td-social-print .td-social-but-icon{background-color:#333}.td-ps-icon-bg .td-social-linkedin .td-social-but-icon{background-color:#0266a0}.td-ps-icon-bg .td-social-tumblr .td-social-but-icon{background-color:#3e5a70}.td-ps-icon-bg .td-social-telegram .td-social-but-icon{background-color:#179cde}.td-ps-icon-bg .td-social-stumbleupon .td-social-but-icon{background-color:#ee4813}.td-ps-icon-bg .td-social-vk .td-social-but-icon{background-color:#4c75a3}.td-ps-icon-bg .td-social-line .td-social-but-icon{background-color:#00b900}.td-ps-icon-bg .td-social-viber .td-social-but-icon{background-color:#5d54a4}.td-ps-icon-bg .td-social-naver .td-social-but-icon{background-color:#3ec729}.td-ps-icon-bg .td-social-flipboard .td-social-but-icon{background-color:#f42827}.td-ps-icon-bg .td-social-kakao .td-social-but-icon{background-color:#f9e000}.td-ps-icon-bg .td-social-gettr .td-social-but-icon{background-color:#fc223b}.td-ps-icon-bg .td-social-koo .td-social-but-icon{background-color:#facd00}.td-ps-icon-bg .td-social-but-text{margin-left:-3px}.td-ps-icon-bg .td-social-network .td-social-but-text:before{display:none}.td-ps-icon-arrow .td-social-network .td-social-but-icon:after{content:'';position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:calc(100% + 1px);width:0;height:0;border-style:solid;border-width:9px 0 9px 11px;border-color:transparent transparent transparent #000}.td-ps-icon-arrow .td-social-network .td-social-but-text{padding-left:20px}.td-ps-icon-arrow .td-social-network .td-social-but-text:before{display:none}.td-ps-icon-arrow.td-ps-padding .td-social-network .td-social-but-icon:after{left:100%}.td-ps-icon-arrow .td-social-facebook .td-social-but-icon:after{border-left-color:#516eab}.td-ps-icon-arrow .td-social-twitter .td-social-but-icon:after{border-left-color:#29c5f6}.td-ps-icon-arrow .td-social-pinterest .td-social-but-icon:after{border-left-color:#ca212a}.td-ps-icon-arrow .td-social-whatsapp .td-social-but-icon:after{border-left-color:#7bbf6a}.td-ps-icon-arrow .td-social-reddit .td-social-but-icon:after{border-left-color:#f54200}.td-ps-icon-arrow .td-social-mail .td-social-but-icon:after,.td-ps-icon-arrow .td-social-digg .td-social-but-icon:after,.td-ps-icon-arrow .td-social-copy_url .td-social-but-icon:after{border-left-color:#000}.td-ps-icon-arrow .td-social-print .td-social-but-icon:after{border-left-color:#333}.td-ps-icon-arrow .td-social-linkedin .td-social-but-icon:after{border-left-color:#0266a0}.td-ps-icon-arrow .td-social-tumblr .td-social-but-icon:after{border-left-color:#3e5a70}.td-ps-icon-arrow .td-social-telegram .td-social-but-icon:after{border-left-color:#179cde}.td-ps-icon-arrow .td-social-stumbleupon .td-social-but-icon:after{border-left-color:#ee4813}.td-ps-icon-arrow .td-social-vk .td-social-but-icon:after{border-left-color:#4c75a3}.td-ps-icon-arrow .td-social-line .td-social-but-icon:after{border-left-color:#00b900}.td-ps-icon-arrow .td-social-viber .td-social-but-icon:after{border-left-color:#5d54a4}.td-ps-icon-arrow .td-social-naver .td-social-but-icon:after{border-left-color:#3ec729}.td-ps-icon-arrow .td-social-flipboard .td-social-but-icon:after{border-left-color:#f42827}.td-ps-icon-arrow .td-social-kakao .td-social-but-icon:after{border-left-color:#f9e000}.td-ps-icon-arrow .td-social-gettr .td-social-but-icon:after{border-left-color:#fc223b}.td-ps-icon-arrow .td-social-koo .td-social-but-icon:after{border-left-color:#facd00}.td-ps-icon-arrow .td-social-expand-tabs .td-social-but-icon:after{display:none}.td-ps-icon-color .td-social-facebook .td-social-but-icon{color:#516eab}.td-ps-icon-color .td-social-pinterest .td-social-but-icon{color:#ca212a}.td-ps-icon-color .td-social-whatsapp .td-social-but-icon{color:#7bbf6a}.td-ps-icon-color .td-social-reddit .td-social-but-icon{color:#f54200}.td-ps-icon-color .td-social-mail .td-social-but-icon,.td-ps-icon-color .td-social-digg .td-social-but-icon,.td-ps-icon-color .td-social-copy_url .td-social-but-icon,.td-ps-icon-color .td-social-copy_url-check,.td-ps-icon-color .td-social-twitter .td-social-but-icon{color:#000}.td-ps-icon-color .td-social-print .td-social-but-icon{color:#333}.td-ps-icon-color .td-social-linkedin .td-social-but-icon{color:#0266a0}.td-ps-icon-color .td-social-tumblr .td-social-but-icon{color:#3e5a70}.td-ps-icon-color .td-social-telegram .td-social-but-icon{color:#179cde}.td-ps-icon-color .td-social-stumbleupon .td-social-but-icon{color:#ee4813}.td-ps-icon-color .td-social-vk .td-social-but-icon{color:#4c75a3}.td-ps-icon-color .td-social-line .td-social-but-icon{color:#00b900}.td-ps-icon-color .td-social-viber .td-social-but-icon{color:#5d54a4}.td-ps-icon-color .td-social-naver .td-social-but-icon{color:#3ec729}.td-ps-icon-color .td-social-flipboard .td-social-but-icon{color:#f42827}.td-ps-icon-color .td-social-kakao .td-social-but-icon{color:#f9e000}.td-ps-icon-color .td-social-gettr .td-social-but-icon{color:#fc223b}.td-ps-icon-color .td-social-koo .td-social-but-icon{color:#facd00}.td-ps-text-color .td-social-but-text{font-weight:700}.td-ps-text-color .td-social-facebook .td-social-but-text{color:#516eab}.td-ps-text-color .td-social-twitter .td-social-but-text{color:#29c5f6}.td-ps-text-color .td-social-pinterest .td-social-but-text{color:#ca212a}.td-ps-text-color .td-social-whatsapp .td-social-but-text{color:#7bbf6a}.td-ps-text-color .td-social-reddit .td-social-but-text{color:#f54200}.td-ps-text-color .td-social-mail .td-social-but-text,.td-ps-text-color .td-social-digg .td-social-but-text,.td-ps-text-color .td-social-copy_url .td-social-but-text{color:#000}.td-ps-text-color .td-social-print .td-social-but-text{color:#333}.td-ps-text-color .td-social-linkedin .td-social-but-text{color:#0266a0}.td-ps-text-color .td-social-tumblr .td-social-but-text{color:#3e5a70}.td-ps-text-color .td-social-telegram .td-social-but-text{color:#179cde}.td-ps-text-color .td-social-stumbleupon .td-social-but-text{color:#ee4813}.td-ps-text-color .td-social-vk .td-social-but-text{color:#4c75a3}.td-ps-text-color .td-social-line .td-social-but-text{color:#00b900}.td-ps-text-color .td-social-viber .td-social-but-text{color:#5d54a4}.td-ps-text-color .td-social-naver .td-social-but-text{color:#3ec729}.td-ps-text-color .td-social-flipboard .td-social-but-text{color:#f42827}.td-ps-text-color .td-social-kakao .td-social-but-text{color:#f9e000}.td-ps-text-color .td-social-gettr .td-social-but-text{color:#fc223b}.td-ps-text-color .td-social-koo .td-social-but-text{color:#facd00}.td-ps-text-color .td-social-expand-tabs .td-social-but-text{color:#b1b1b1}.td-ps-notext .td-social-but-icon{width:40px}.td-ps-notext .td-social-network .td-social-but-text{display:none}.td-ps-padding .td-social-network .td-social-but-icon{padding-left:17px;padding-right:17px}.td-ps-padding .td-social-handler .td-social-but-icon{width:40px}.td-ps-padding .td-social-reddit .td-social-but-icon,.td-ps-padding .td-social-telegram .td-social-but-icon{padding-right:16px}.td-ps-padding .td-social-stumbleupon .td-social-but-icon,.td-ps-padding .td-social-digg .td-social-but-icon,.td-ps-padding .td-social-expand-tabs .td-social-but-icon{padding-right:13px}.td-ps-padding .td-social-vk .td-social-but-icon{padding-right:14px}.td-ps-padding .td-social-expand-tabs .td-social-but-icon{padding-left:13px}.td-ps-rounded .td-social-network .td-social-but-icon{border-top-left-radius:100px;border-bottom-left-radius:100px}.td-ps-rounded .td-social-network .td-social-but-text{border-top-right-radius:100px;border-bottom-right-radius:100px}.td-ps-rounded.td-ps-notext .td-social-network .td-social-but-icon{border-top-right-radius:100px;border-bottom-right-radius:100px}.td-ps-rounded .td-social-expand-tabs{border-radius:100px}.td-ps-bar .td-social-network .td-social-but-icon,.td-ps-bar .td-social-network .td-social-but-text{-webkit-box-shadow:inset 0px -3px 0px 0px rgba(0,0,0,0.31);box-shadow:inset 0px -3px 0px 0px rgba(0,0,0,0.31)}.td-ps-bar .td-social-mail .td-social-but-icon,.td-ps-bar .td-social-digg .td-social-but-icon,.td-ps-bar .td-social-copy_url .td-social-but-icon,.td-ps-bar .td-social-mail .td-social-but-text,.td-ps-bar .td-social-digg .td-social-but-text,.td-ps-bar .td-social-copy_url .td-social-but-text{-webkit-box-shadow:inset 0px -3px 0px 0px rgba(255,255,255,0.28);box-shadow:inset 0px -3px 0px 0px rgba(255,255,255,0.28)}.td-ps-bar .td-social-print .td-social-but-icon,.td-ps-bar .td-social-print .td-social-but-text{-webkit-box-shadow:inset 0px -3px 0px 0px rgba(255,255,255,0.2);box-shadow:inset 0px -3px 0px 0px rgba(255,255,255,0.2)}.td-ps-big .td-social-but-icon{display:block;line-height:60px}.td-ps-big .td-social-but-icon .td-icon-share{width:auto}.td-ps-big .td-social-handler .td-social-but-text:before{display:none}.td-ps-big .td-social-share-text .td-social-but-icon{width:90px}.td-ps-big .td-social-expand-tabs .td-social-but-icon{width:60px}@media (max-width:767px){.td-ps-big .td-social-share-text{display:none}}.td-ps-big .td-social-facebook i,.td-ps-big .td-social-reddit i,.td-ps-big .td-social-mail i,.td-ps-big .td-social-linkedin i,.td-ps-big .td-social-tumblr i,.td-ps-big .td-social-stumbleupon i{margin-top:-2px}.td-ps-big .td-social-facebook i,.td-ps-big .td-social-reddit i,.td-ps-big .td-social-linkedin i,.td-ps-big .td-social-tumblr i,.td-ps-big .td-social-stumbleupon i,.td-ps-big .td-social-vk i,.td-ps-big .td-social-viber i,.td-ps-big .td-social-fliboard i,.td-ps-big .td-social-koo i,.td-ps-big .td-social-share-text i{font-size:22px}.td-ps-big .td-social-telegram i{font-size:24px}.td-ps-big .td-social-mail i,.td-ps-big .td-social-line i,.td-ps-big .td-social-print i{font-size:23px}.td-ps-big .td-social-twitter i,.td-ps-big .td-social-expand-tabs i{font-size:20px}.td-ps-big .td-social-whatsapp i,.td-ps-big .td-social-naver i,.td-ps-big .td-social-flipboard i,.td-ps-big .td-social-kakao i{font-size:26px}.td-ps-big .td-social-pinterest .td-icon-pinterest{font-size:21px}.td-ps-big .td-social-telegram .td-icon-telegram{left:1px}.td-ps-big .td-social-stumbleupon .td-icon-stumbleupon{left:-2px}.td-ps-big .td-social-digg .td-icon-digg{left:-1px;font-size:25px}.td-ps-big .td-social-vk .td-icon-vk{left:-1px}.td-ps-big .td-social-naver .td-icon-naver{left:0}.td-ps-big .td-social-gettr .td-icon-gettr{left:-1px}.td-ps-big .td-social-copy_url .td-icon-copy_url{left:0;font-size:25px}.td-ps-big .td-social-copy_url-check{font-size:18px}.td-ps-big .td-social-but-text{margin-left:0;padding-top:0;padding-left:17px}.td-ps-big.td-ps-notext .td-social-network,.td-ps-big.td-ps-notext .td-social-handler{height:60px}.td-ps-big.td-ps-notext .td-social-network{width:60px}.td-ps-big.td-ps-notext .td-social-network .td-social-but-icon{width:60px}.td-ps-big.td-ps-notext .td-social-share-text .td-social-but-icon{line-height:40px}.td-ps-big.td-ps-notext .td-social-share-text .td-social-but-text{display:block;line-height:1}.td-ps-big.td-ps-padding .td-social-network,.td-ps-big.td-ps-padding .td-social-handler{height:90px;font-size:13px}.td-ps-big.td-ps-padding .td-social-network{min-width:60px}.td-ps-big.td-ps-padding .td-social-but-icon{border-bottom-left-radius:0;border-top-right-radius:2px}.td-ps-big.td-ps-padding.td-ps-bar .td-social-but-icon{-webkit-box-shadow:none;box-shadow:none}.td-ps-big.td-ps-padding .td-social-but-text{display:block;padding-bottom:17px;line-height:1;border-top-left-radius:0;border-top-right-radius:0;border-bottom-left-radius:2px}.td-ps-big.td-ps-padding .td-social-but-text:before{display:none}.td-ps-big.td-ps-padding .td-social-expand-tabs i{line-height:90px}.td-ps-nogap{margin-left:0;margin-right:0}.td-ps-nogap .td-social-network,.td-ps-nogap .td-social-handler{margin-left:0;margin-right:0;border-radius:0}.td-ps-nogap .td-social-network .td-social-but-icon,.td-ps-nogap .td-social-network .td-social-but-text{border-radius:0}.td-ps-nogap .td-social-expand-tabs{border-radius:0}.td-post-sharing-style7 .td-social-network .td-social-but-icon{height:100%}.td-post-sharing-style7 .td-social-network .td-social-but-icon:before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.31)}.td-post-sharing-style7 .td-social-network .td-social-but-text{padding-left:17px}.td-post-sharing-style7 .td-social-network .td-social-but-text:before{display:none}.td-post-sharing-style7 .td-social-mail .td-social-but-icon:before,.td-post-sharing-style7 .td-social-digg .td-social-but-icon:before,.td-post-sharing-style7 .td-social-copy_url .td-social-but-icon:before{background-color:rgba(255,255,255,0.2)}.td-post-sharing-style7 .td-social-print .td-social-but-icon:before{background-color:rgba(255,255,255,0.1)}@media (max-width:767px){.td-post-sharing-style1 .td-social-share-text .td-social-but-text,.td-post-sharing-style3 .td-social-share-text .td-social-but-text,.td-post-sharing-style5 .td-social-share-text .td-social-but-text,.td-post-sharing-style14 .td-social-share-text .td-social-but-text,.td-post-sharing-style16 .td-social-share-text .td-social-but-text{display:none!important}}@media (max-width:767px){.td-post-sharing-style2 .td-social-share-text,.td-post-sharing-style4 .td-social-share-text,.td-post-sharing-style6 .td-social-share-text,.td-post-sharing-style7 .td-social-share-text,.td-post-sharing-style15 .td-social-share-text,.td-post-sharing-style17 .td-social-share-text,.td-post-sharing-style18 .td-social-share-text,.td-post-sharing-style19 .td-social-share-text,.td-post-sharing-style20 .td-social-share-text{display:none!important}}</style>
+
+		<div class="td-post-sharing-visible"><div class="td-social-sharing-button td-social-sharing-button-js td-social-handler td-social-share-text">
+                                        <div class="td-social-but-icon"><i class="td-icon-share"></i></div>
+                                        <div class="td-social-but-text">Compartilhar</div>
+                                    </div><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F" title="Facebook" ><div class="td-social-but-icon"><i class="td-icon-facebook"></i></div><div class="td-social-but-text">Facebook</div></a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=Chegada+do+ver%C3%A3o+deixa+alerta+para+%C3%A1gua+parada&url=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F&via=Jornal+O+Celeiro" title="Twitter" ><div class="td-social-but-icon"><i class="td-icon-twitter"></i></div><div class="td-social-but-text">Twitter</div></a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text=Chegada+do+ver%C3%A3o+deixa+alerta+para+%C3%A1gua+parada %0A%0A https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" title="WhatsApp" ><div class="td-social-but-icon"><i class="td-icon-whatsapp"></i></div><div class="td-social-but-text">WhatsApp</div></a></div><div class="td-social-sharing-hidden"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="#" data-block-uid="td_social_sharing_article_top" title="More">
+                                    <div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+                                </a></div></div></div>
+        <div class="td-post-content tagdiv-type">
+            <!-- image --><div class="td-post-featured-image"><a href="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg" data-caption=""><img width="696" height="464" class="entry-thumb td-modal-image" src="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg" srcset="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg 4608w, https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059-300x200.jpg 300w, https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059-768x512.jpg 768w, https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059-1024x683.jpg 1024w" sizes="(max-width: 696px) 100vw, 696px" alt="" title="DSCF1059"/></a></div>
+            <!-- content --><div class="td-a-rec td-a-rec-id-content_top  tdi_2 td_block_template_1">
+<style>.tdi_2.td-a-rec{text-align:center}.tdi_2.td-a-rec:not(.td-a-rec-no-translate){transform:translateZ(0)}.tdi_2 .td-element-style{z-index:-1}.tdi_2.td-a-rec-img{text-align:left}.tdi_2.td-a-rec-img img{margin:0 auto 0 0}@media (max-width:767px){.tdi_2.td-a-rec-img{text-align:center}}</style>
+	<div class="slideshow_container slideshow_container_style-light" style="height: 300px; " data-slideshow-id="63323" data-style-name="style-light" data-style-version="2.3.1" >
+
+					<div class="slideshow_loading_icon"></div>
+		
+		<div class="slideshow_content" style="display: none;">
+
+			<div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+					<a href="https://orcatea.com.br/" target="_blank" >						<img src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/banner-site-scaled.jpg" alt="banner site" width="2560" height="664" />
+					</a>					<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title"><a href="https://orcatea.com.br/" target="_blank" >banner site</a></div>											</div>
+				</div>
+
+						<div style="clear: both;"></div></div><div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+					<a href="https://acircan.com.br/site/" target="_self" >						<img src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-03-at-14.29.40.jpeg" alt="banner acircan" width="1600" height="413" />
+					</a>					<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title"><a href="https://acircan.com.br/site/" target="_self" >WhatsApp Image 2024-01-03 at 14.29.40</a></div>						<div class="slideshow_description"><a href="https://acircan.com.br/site/" target="_self" >banner acircan</a></div>					</div>
+				</div>
+
+						<div style="clear: both;"></div></div><div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+					<a href="https://wa.me/5549988282224" target="_self" >						<img src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-03-at-14.33.31.jpeg" alt="banner para acesso ao whatsapp" width="1600" height="401" />
+					</a>					<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title"><a href="https://wa.me/5549988282224" target="_self" >banner whatsapp</a></div>						<div class="slideshow_description"><a href="https://wa.me/5549988282224" target="_self" >banner para acesso ao whatsapp</a></div>					</div>
+				</div>
+
+						<div style="clear: both;"></div></div><div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+					<a href="http://www.cdlcamposnovos.com.br/" target="_self" >						<img src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/CDL-banner-digital-servicos.png" alt="cdl banner" width="4036" height="1048" />
+					</a>					<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title"><a href="http://www.cdlcamposnovos.com.br/" target="_self" >CDL banner digital serviços</a></div>						<div class="slideshow_description"><a href="http://www.cdlcamposnovos.com.br/" target="_self" >cdl banner</a></div>					</div>
+				</div>
+
+						<div style="clear: both;"></div></div>
+		</div>
+
+		<div class="slideshow_controlPanel slideshow_transparent" style="display: none;"><ul><li class="slideshow_togglePlay" data-play-text="Acionar" data-pause-text="Pausar"></li></ul></div>
+
+		<div class="slideshow_button slideshow_previous slideshow_transparent" role="button" data-previous-text="Anterior" style="display: none;"></div>
+		<div class="slideshow_button slideshow_next slideshow_transparent" role="button" data-next-text="Próximo" style="display: none;"></div>
+
+		<div class="slideshow_pagination" style="display: none;" data-go-to-text="Ir para o slide"><div class="slideshow_pagination_center"></div></div>
+
+		<!-- WordPress Slideshow Version 2.3.1 -->
+
+			</div>
+
+</div><p>Com a chegada do verão, aumento da temperatura e das chuvas, há também o aumento do risco de proliferação do mosquito Aedes aegypti, esta espécie é beneficiada durante estes períodos, o calor facilita suas atividades e desenvolvimento; e as chuvas intensas resultam em maior quantidade de locais com água parada que servem de criadouros para suas larvas.</p>
+<p>Em Santa Catarina no período de 01/01 a 25/11/2017 foram identificados 10.361 focos do mosquito Aedes aegypti (ou seja, locais com presença de larvas ou mosquitos adultos deste mosquito), em 144 municípios. Neste mesmo período em 2016, haviam sido identificados 6.601 focos em 134 municípios. O número de focos de 2017 é 57% maior quando comparado ao mesmo período do ano de 2016. Até novembro 62 municípios de Santa Catarina já foram considerados infestados, o que representa um incremento de 24% em relação ao mesmo período de 2016, que registrou 50 municípios nessa condição.</p>
+<p>No município de Campos Novos, este ano houve um foco de Aedes aegypti no mês de março, tratando-se do encontro de larva em uma das mais de 100 armadilhas distribuídas na cidade e inspecionadas semanalmente. Tratou-se apenas de uma situação esporádica, não tendo ocorrido a dispersão deste mosquito no município.<br />
+Em relação aos casos de dengue confirmados em Santa Catarina, até novembro de 2017 somente 14 casos desta doença foram confirmados no estado, no mesmo período em 2016 haviam sido confirmados 4.378 casos. Uma redução significativa na transmissão da doença. Além disso, este ano no estado foram registrados 33 casos confirmados de chikungunya e um caso confirmado de zika.</p>
+<p>Os cuidados para evitar a proliferação de mosquito são sempre cuidados básicos, relacionados principalmente à educação da população, evitar usar pratos nos vasos de plantas, se usar, colocar areia até a borda; guardar garrafas com o gargalo virado para baixo; manter lixeiras tampadas; deixar os depósitos para guardar água sempre vedados, sem qualquer abertura, principalmente as caixas d’água; plantas como bromélias devem ser evitadas, pois acumulam água; tratar a água da piscina com cloro e limpar uma vez por semana; manter ralos fechados e desentupidos; lavar com escova os potes de comida e de água dos animais no mínimo uma vez por semana; retirar a água acumulada em lajes; evitar acumular entulho, pois podem se tornar locais de focos de mosquitos. Estes são os objetos preferenciais usados pelo Aedes aegypti para colocar seus ovos.</p>
+<div id='gallery-1' class='gallery galleryid-17884 gallery-columns-3 gallery-size-thumbnail'><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg'><img decoding="async" width="150" height="150" src="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1061.jpg'><img decoding="async" width="150" height="150" src="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1061-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF7001.jpg'><img decoding="async" width="150" height="150" src="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF7001-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+			</div></figure><figure class='gallery-item'>
+			<div class='gallery-icon landscape'>
+				<a href='https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF7007.jpg'><img loading="lazy" decoding="async" width="150" height="150" src="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF7007-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+			</div></figure>
+		</div>
+
+<div class="td-a-rec td-a-rec-id-content_bottom  tdi_3 td_block_template_1">
+<style>.tdi_3.td-a-rec{text-align:center}.tdi_3.td-a-rec:not(.td-a-rec-no-translate){transform:translateZ(0)}.tdi_3 .td-element-style{z-index:-1}.tdi_3.td-a-rec-img{text-align:left}.tdi_3.td-a-rec-img img{margin:0 auto 0 0}@media (max-width:767px){.tdi_3.td-a-rec-img{text-align:center}}</style>
+	<div class="slideshow_container slideshow_container_style-light" style="height: 82px; " data-slideshow-id="64873" data-style-name="style-light" data-style-version="2.3.1" >
+
+					<div class="slideshow_loading_icon"></div>
+		
+		<div class="slideshow_content" style="display: none;">
+
+			<div class="slideshow_view">
+				<div class="slideshow_slide slideshow_slide_image">
+											<img src="https://jornalceleiro.com.br/wp-content/uploads/2024/04/Imagem-do-WhatsApp-de-2024-04-01-as-12.49.04_e5105cd4.jpg" alt="Propaganda" width="297" height="247" />
+										<div class="slideshow_description_box slideshow_transparent">
+						<div class="slideshow_title">Propaganda</div>						<div class="slideshow_description">Propaganda</div>					</div>
+				</div>
+
+						<div style="clear: both;"></div></div>
+		</div>
+
+		<div class="slideshow_controlPanel slideshow_transparent" style="display: none;"><ul><li class="slideshow_togglePlay" data-play-text="Acionar" data-pause-text="Pausar"></li></ul></div>
+
+		<div class="slideshow_button slideshow_previous slideshow_transparent" role="button" data-previous-text="Anterior" style="display: none;"></div>
+		<div class="slideshow_button slideshow_next slideshow_transparent" role="button" data-next-text="Próximo" style="display: none;"></div>
+
+		<div class="slideshow_pagination" style="display: none;" data-go-to-text="Ir para o slide"><div class="slideshow_pagination_center"></div></div>
+
+		<!-- WordPress Slideshow Version 2.3.1 -->
+
+			</div>
+
+</div>        </div>
+
+        <footer>
+            <!-- post pagination -->            <!-- review -->
+            <div class="td-post-source-tags">
+                <!-- source via -->                <!-- tags -->            </div>
+
+            <div class="td-post-sharing-bottom"><div class="td-post-sharing-classic"><iframe title="bottomFacebookLike" frameBorder="0" src="https://www.facebook.com/plugins/like.php?href=https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/&amp;layout=button_count&amp;show_faces=false&amp;width=105&amp;action=like&amp;colorscheme=light&amp;height=21" style="border:none; overflow:hidden; width:auto; height:21px; background-color:transparent;"></iframe></div><div id="td_social_sharing_article_bottom" class="td-post-sharing td-ps-bg td-ps-notext td-post-sharing-style1 "><div class="td-post-sharing-visible"><div class="td-social-sharing-button td-social-sharing-button-js td-social-handler td-social-share-text">
+                                        <div class="td-social-but-icon"><i class="td-icon-share"></i></div>
+                                        <div class="td-social-but-text">Compartilhar</div>
+                                    </div><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F" title="Facebook" ><div class="td-social-but-icon"><i class="td-icon-facebook"></i></div><div class="td-social-but-text">Facebook</div></a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=Chegada+do+ver%C3%A3o+deixa+alerta+para+%C3%A1gua+parada&url=https%3A%2F%2Fjornalceleiro.com.br%2F2017%2F12%2Fchegada-do-verao-deixa-alerta-para-agua-parada%2F&via=Jornal+O+Celeiro" title="Twitter" ><div class="td-social-but-icon"><i class="td-icon-twitter"></i></div><div class="td-social-but-text">Twitter</div></a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text=Chegada+do+ver%C3%A3o+deixa+alerta+para+%C3%A1gua+parada %0A%0A https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/" title="WhatsApp" ><div class="td-social-but-icon"><i class="td-icon-whatsapp"></i></div><div class="td-social-but-text">WhatsApp</div></a></div><div class="td-social-sharing-hidden"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="#" data-block-uid="td_social_sharing_article_bottom" title="More">
+                                    <div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+                                </a></div></div></div>            <!-- next prev --><div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Artigo anterior</span><a href="https://jornalceleiro.com.br/2017/12/confraternizacao-do-centro-de-convivencia-pe-quintilio-costini-encerra-suas-atividades-de-2017/">Confraternização do Centro de Convivência Pe. Quintilio Costini encerra suas atividades de 2017</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Próximo artigo</span><a href="https://jornalceleiro.com.br/2017/12/a-busca-do-eu/">A busca do eu</a></div></div></div>            <!-- author box --><div class="td-author-name vcard author" style="display: none"><span class="fn"><a href="https://jornalceleiro.com.br/author/redacao/">Redação</a></span></div>            <!-- meta --><span class="td-page-meta" itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Redação"><meta itemprop="url" content="https://jornalceleiro.com.br/author/redacao/"></span><meta itemprop="datePublished" content="2017-12-08T09:12:59-03:00"><meta itemprop="dateModified" content="2017-12-08T09:12:59-03:00"><meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://jornalceleiro.com.br/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/"/><span class="td-page-meta" itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><span class="td-page-meta" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png"></span><meta itemprop="name" content="Jornal O Celeiro"></span><meta itemprop="headline " content="Chegada do verão deixa alerta para água parada"><span class="td-page-meta" itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://jornalceleiro.com.br/wp-content/uploads/2017/12/DSCF1059.jpg"><meta itemprop="width" content="4608"><meta itemprop="height" content="3072"></span>        </footer>
+
+    </article> <!-- /.post -->
+
+    <div class="td_block_wrap td_block_related_posts tdi_4 td_with_ajax_pagination td-pb-border-top td_block_template_1"  data-td-block-uid="tdi_4" ><script type="rocketlazyloadscript">var block_tdi_4 = new tdBlock();
+block_tdi_4.id = "tdi_4";
+block_tdi_4.atts = '{"limit":3,"ajax_pagination":"next_prev","live_filter":"cur_post_same_categories","td_ajax_filter_type":"td_custom_related","class":"tdi_4","td_column_number":3,"block_type":"td_block_related_posts","live_filter_cur_post_id":17884,"live_filter_cur_post_author":"2","block_template_id":"","header_color":"","ajax_pagination_infinite_stop":"","offset":"","td_ajax_preloading":"","td_filter_default_txt":"","td_ajax_filter_ids":"","el_class":"","color_preset":"","ajax_pagination_next_prev_swipe":"","border_top":"","css":"","tdc_css":"","tdc_css_class":"tdi_4","tdc_css_class_style":"tdi_4_rand_style"}';
+block_tdi_4.td_column_number = "3";
+block_tdi_4.block_type = "td_block_related_posts";
+block_tdi_4.post_count = "3";
+block_tdi_4.found_posts = "12080";
+block_tdi_4.header_color = "";
+block_tdi_4.ajax_pagination_infinite_stop = "";
+block_tdi_4.max_num_pages = "4027";
+tdBlocksArray.push(block_tdi_4);
+</script><h4 class="td-related-title td-block-title"><a id="tdi_5" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="tdi_4" href="#">ARTIGOS RELACIONADOS</a><a id="tdi_6" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="tdi_4" href="#">Mais do autor</a></h4><div id=tdi_4 class="td_block_inner">
+
+	<div class="td-related-row">
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/agro-divel-realiza-evento-alusivo-ao-dia-internacional-da-mulher/"  rel="bookmark" class="td-image-wrap " title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/04/IMG_1141-218x150.jpg"  width="218" height="150" /></a></div>                <a href="https://jornalceleiro.com.br/category/destaques/" class="td-post-category">Destaques</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/agro-divel-realiza-evento-alusivo-ao-dia-internacional-da-mulher/"  rel="bookmark" title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher">Agro Divel realiza evento alusivo ao Dia Internacional da Mulher</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/reuniao-do-cosud-define-estrategias-para-o-andamento-dos-projetos-de-ferrovias/"  rel="bookmark" class="td-image-wrap " title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-04-at-19.08.15-218x150.jpeg"  width="218" height="150" /></a></div>                <a href="https://jornalceleiro.com.br/category/destaques/" class="td-post-category">Destaques</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/reuniao-do-cosud-define-estrategias-para-o-andamento-dos-projetos-de-ferrovias/"  rel="bookmark" title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias">Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/7-de-abril-dia-do-jornalista/"  rel="bookmark" class="td-image-wrap " title="7 de abril – Dia do Jornalista" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANoAAACWAQMAAACCSQSPAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABpJREFUWMPtwQENAAAAwiD7p7bHBwwAAAAg7RD+AAGXD7BoAAAAAElFTkSuQmCC" alt="" title="7 de abril – Dia do Jornalista" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/EDITORIAL-218x150.png"  width="218" height="150" /></a></div>                <a href="https://jornalceleiro.com.br/category/destaques/" class="td-post-category">Destaques</a>            </div>
+            <div class="item-details">
+                <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/7-de-abril-dia-do-jornalista/"  rel="bookmark" title="7 de abril – Dia do Jornalista">7 de abril – Dia do Jornalista</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 --></div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" aria-label="prev-page" id="prev-page-tdi_4" data-td_block_id="tdi_4"><i class="td-next-prev-icon td-icon-font td-icon-menu-left"></i></a><a href="#"  class="td-ajax-next-page" aria-label="next-page" id="next-page-tdi_4" data-td_block_id="tdi_4"><i class="td-next-prev-icon td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
+        <div class="comments" id="comments">
+        
+            <div class="td-comments-title-wrap td_block_template_1">
+                <h4 class="td-comments-title block-title">
+                    <span>1 COMENTÁRIO</span>
+                </h4>
+            </div>
+
+            <ol class="comment-list ">
+	                                        <li class="comment " id="comment-1589">
+                                <article>
+                                    <footer>
+							                                                    <cite>JOÃO</cite>
+
+                                        <a class="comment-link" href="#comment-1589">
+                                            <time pubdate="1513269814">
+									            14 dezembro, 2017									            At									            13:43                                            </time>
+                                        </a>
+
+							            
+                                    </footer>
+
+                                    <div class="comment-content tagdiv-type">
+							            							            <p>NO MEU BAIIRO O SENHOR BOM JESUS VAI TER MUITAS PESSOAS COM DENGUE, POIS TENHO UMA VIZINHA QUE TEM MAIS DE 50 VASOS DE FLORES E DEIXA A ÁGUA DA CHUVA PARADA E ARMAZENADA EM BALDES. DEPOIS QUE AS PESSOAS PEGAREM DENGUE, AÍ JÁ ERA UAI!</p>
+                                    </div>
+
+                                    <div class="comment-meta" id="comment-1589">
+							            <a rel='nofollow' class='comment-reply-link' href='#comment-1589' data-commentid="1589" data-postid="17884" data-belowelement="comment-1589" data-respondelement="respond" data-replyto="Responder para JOÃO" aria-label='Responder para JOÃO'>Responder</a>                                    </div>
+                                </article>
+                                <!-- closing li is not needed  will break the comment indent on reply -->
+                                <!-- </li>-->
+				            </li><!-- #comment-## -->
+            </ol>
+            <div class="comment-pagination">
+                                            </div>
+
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">DEIXE UMA RESPOSTA <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2017/12/chegada-do-verao-deixa-alerta-para-agua-parada/#respond" style="display:none;">Cancelar resposta</a></small></h3><form action="https://jornalceleiro.com.br/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><div class="clearfix"></div>
+            <div class="comment-form-input-wrap td-form-comment">
+                <textarea placeholder="Comentário:" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+                <div class="td-warning-comment">Por favor digite seu comentário!</div>
+            </div><div class="comment-form-input-wrap td-form-author">
+			            <input class="" id="author" name="author" placeholder="Nome:*" type="text" value="" size="30"  aria-required='true' />
+			            <div class="td-warning-author">Por favor, digite seu nome aqui</div>
+			         </div>
+<div class="comment-form-input-wrap td-form-email">
+			            <input class="" id="email" name="email" placeholder="E-mail:*" type="text" value="" size="30"  aria-required='true' />
+			            <div class="td-warning-email-error">Você digitou um endereço de e-mail incorreto!</div>
+			            <div class="td-warning-email">Por favor, digite seu endereço de e-mail aqui</div>
+			         </div>
+<div class="comment-form-input-wrap td-form-url">
+			            <input class="" id="url" name="url" placeholder="Site:" type="text" value="" size="30" />
+                     </div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Salve meu nome, e-mail e site neste navegador para a próxima vez que eu comentar.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Postar Comentário" /> <input type='hidden' name='comment_post_ID' value='17884' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="53f53d6ce8" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="220"/><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	    </div> <!-- /.content -->
+                                </div>
+                        </div>
+                        <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                            <div class="td-ss-main-sidebar">
+                                <div class="td_block_wrap td_block_7 td_block_widget tdi_8 td-pb-border-top td_block_template_1 td-column-1 td_block_padding"  data-td-block-uid="tdi_8" >
+<style>.td-theme-wrap .tdi_8 .td-pulldown-filter-link:hover,.td-theme-wrap .tdi_8 .td-subcat-item a:hover,.td-theme-wrap .tdi_8 .td-subcat-item .td-cur-simple-item{color:#095ba7}.td-theme-wrap .tdi_8 .block-title>*,.td-theme-wrap .tdi_8 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7}.td-theme-wrap .td-footer-wrapper .tdi_8 .block-title>*{padding:6px 7px 5px;line-height:1}.td-theme-wrap .tdi_8 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_8 .td_module_wrap:hover .entry-title a,.td-theme-wrap .tdi_8 .td_quote_on_blocks,.td-theme-wrap .tdi_8 .td-opacity-cat .td-post-category:hover,.td-theme-wrap .tdi_8 .td-opacity-read .td-read-more a:hover,.td-theme-wrap .tdi_8 .td-opacity-author .td-post-author-name a:hover,.td-theme-wrap .tdi_8 .td-instagram-user a{color:#095ba7}.td-theme-wrap .tdi_8 .td-next-prev-wrap a:hover,.td-theme-wrap .tdi_8 .td-load-more-wrap a:hover{background-color:#095ba7;border-color:#095ba7}.td-theme-wrap .tdi_8 .td-read-more a,.td-theme-wrap .tdi_8 .td-weather-information:before,.td-theme-wrap .tdi_8 .td-weather-week:before,.td-theme-wrap .tdi_8 .td-exchange-header:before,.td-theme-wrap .td-footer-wrapper .tdi_8 .td-post-category,.td-theme-wrap .tdi_8 .td-post-category:hover{background-color:#095ba7}</style>
+<style></style><script type="rocketlazyloadscript">var block_tdi_8 = new tdBlock();
+block_tdi_8.id = "tdi_8";
+block_tdi_8.atts = '{"custom_title":"Colunistas","custom_url":"Colunistas","block_template_id":"","header_color":"#095ba7","header_text_color":"#","accent_text_color":"#095ba7","m6_tl":"","limit":"6","offset":"","el_class":"","post_ids":"-17884","category_id":"47","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","sort":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","td_ajax_preloading":"","ajax_pagination":"","ajax_pagination_infinite_stop":"","taxonomies":"","include_cf_posts":"","exclude_cf_posts":"","linked_posts":"","time_ago_add_txt":"ago","class":"td_block_widget tdi_8","block_type":"td_block_7","separator":"","in_all_terms":"","favourite_only":"","open_in_new_window":"","show_modified_date":"","time_ago":"","time_ago_txt_pos":"","review_source":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_settings":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_settings":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_settings":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_settings":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_settings":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_settings":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination_next_prev_swipe":"","css":"","tdc_css":"","td_column_number":1,"color_preset":"","border_top":"","tdc_css_class":"tdi_8","tdc_css_class_style":"tdi_8_rand_style"}';
+block_tdi_8.td_column_number = "1";
+block_tdi_8.block_type = "td_block_7";
+block_tdi_8.post_count = "6";
+block_tdi_8.found_posts = "791";
+block_tdi_8.header_color = "#095ba7";
+block_tdi_8.ajax_pagination_infinite_stop = "";
+block_tdi_8.max_num_pages = "132";
+tdBlocksArray.push(block_tdi_8);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><a href="http://Colunistas" class="td-pulldown-size">Colunistas</a></h4></div><div id=tdi_8 class="td_block_inner">
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/o-contrato-de-integracao-vertical/"  rel="bookmark" class="td-image-wrap " title="O CONTRATO DE INTEGRAÇÃO VERTICAL" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="O CONTRATO DE INTEGRAÇÃO VERTICAL" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LEO-FORNARA-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/o-contrato-de-integracao-vertical/"  rel="bookmark" title="O CONTRATO DE INTEGRAÇÃO VERTICAL">O CONTRATO DE INTEGRAÇÃO VERTICAL</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-04-03T17:40:00-03:00" >3 abril, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/auxilio-reclusao-vamos-entender-o-que-e-qual-a-previsao-legal-e-quem-pode-receber-esse-beneficio/"  rel="bookmark" class="td-image-wrap " title="AUXÍLIO-RECLUSÃO, Vamos entender o que é, Qual a Previsão Legal e Quem pode receber esse benefício!" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="AUXÍLIO-RECLUSÃO, Vamos entender o que é, Qual a Previsão Legal e Quem pode receber esse benefício!" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/OAB-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/auxilio-reclusao-vamos-entender-o-que-e-qual-a-previsao-legal-e-quem-pode-receber-esse-beneficio/"  rel="bookmark" title="AUXÍLIO-RECLUSÃO, Vamos entender o que é, Qual a Previsão Legal e Quem pode receber esse benefício!">AUXÍLIO-RECLUSÃO, Vamos entender o que é, Qual a Previsão Legal e...</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-04-02T16:41:46-03:00" >2 abril, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/03/acidentes-ofidicos/"  rel="bookmark" class="td-image-wrap " title="Acidentes ofídicos" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Acidentes ofídicos" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/vane-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/03/acidentes-ofidicos/"  rel="bookmark" title="Acidentes ofídicos">Acidentes ofídicos</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-03-27T07:53:06-03:00" >27 março, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/03/imposto-de-renda-2024-o-que-deve-ser-declarado-pelo-contribuinte/"  rel="bookmark" class="td-image-wrap " title="Imposto de Renda 2024: o que deve ser declarado pelo contribuinte?" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Imposto de Renda 2024: o que deve ser declarado pelo contribuinte?" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/douglas-evoluir-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/03/imposto-de-renda-2024-o-que-deve-ser-declarado-pelo-contribuinte/"  rel="bookmark" title="Imposto de Renda 2024: o que deve ser declarado pelo contribuinte?">Imposto de Renda 2024: o que deve ser declarado pelo contribuinte?</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-03-12T07:29:51-03:00" >12 março, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/03/o-contrato-de-fornecimento-de-insumos-agricolas/"  rel="bookmark" class="td-image-wrap " title="O CONTRATO DE FORNECIMENTO DE INSUMOS AGRÍCOLAS" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="O CONTRATO DE FORNECIMENTO DE INSUMOS AGRÍCOLAS" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LEO-FORNARA-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/03/o-contrato-de-fornecimento-de-insumos-agricolas/"  rel="bookmark" title="O CONTRATO DE FORNECIMENTO DE INSUMOS AGRÍCOLAS">O CONTRATO DE FORNECIMENTO DE INSUMOS AGRÍCOLAS</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-03-05T11:16:02-03:00" >5 março, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 -->
+
+	<div class="td-block-span12">
+
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/02/estatuto-do-idoso-lei-no-10-741-2003-direitos-dos-idosos-dever-dos-filhos/"  rel="bookmark" class="td-image-wrap " title="ESTATUTO DO IDOSO &#8211; Lei no 10.741/2003 (Direitos dos idosos, dever dos filhos)" ><img class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="ESTATUTO DO IDOSO &#8211; Lei no 10.741/2003 (Direitos dos idosos, dever dos filhos)" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/01/OAB-100x70.png"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/02/estatuto-do-idoso-lei-no-10-741-2003-direitos-dos-idosos-dever-dos-filhos/"  rel="bookmark" title="ESTATUTO DO IDOSO &#8211; Lei no 10.741/2003 (Direitos dos idosos, dever dos filhos)">ESTATUTO DO IDOSO &#8211; Lei no 10.741/2003 (Direitos dos idosos, dever...</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-02-26T11:33:16-03:00" >26 fevereiro, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+	</div> <!-- ./td-block-span12 --></div></div> <!-- ./block -->                            </div>
+                        </div>
+                                    </div> <!-- /.td-pb-row -->
+        </div> <!-- /.td-container -->
+    </div> <!-- /.td-main-content-wrap -->
+
+<!-- Instagram -->
+
+	
+	
+            <div class="tdc-footer-wrap ">
+
+                <!-- Footer -->
+				<div class="td-footer-wrapper td-footer-container td-container-wrap td-footer-template-14 ">
+    <div class="td-container td-footer-bottom-full">
+        <div class="td-pb-row">
+            <div class="td-a-rec td-a-rec-id-footer_top  tdi_10 td_block_template_1">
+<style>.tdi_10.td-a-rec{text-align:center}.tdi_10.td-a-rec:not(.td-a-rec-no-translate){transform:translateZ(0)}.tdi_10 .td-element-style{z-index:-1}.tdi_10.td-a-rec-img{text-align:left}.tdi_10.td-a-rec-img img{margin:0 auto 0 0}@media (max-width:767px){.tdi_10.td-a-rec-img{text-align:center}}</style><div class="td-all-devices">
+<a target="_blank"  href="https://issuu.com/jornaloceleiro/"> <img src="https://jornalceleiro.com.br/wp-content/uploads/2024/04/Imagem-do-WhatsApp-de-2024-04-01-as-12.46.14_b37d94f2.jpg">  </a> 
+</div></div><div class="td-pb-span3"><aside class="footer-logo-wrap"><a href="https://jornalceleiro.com.br/"><img class="td-retina-data" src="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" data-retina="https://jornalceleiro.com.br/wp-content/uploads/2024/01/LOGO-CELEIRO-300x93.png" alt="Jornal O Celeiro" title="Jornal O Celeiro"  /></a></aside></div><div class="td-pb-span5"><aside class="footer-text-wrap"><div class="block-title"><span>SOBRE NÓS</span></div>Nosso portal de notícias surgiu com objetivo de levar as reportagens do impresso ao digital. No portal O Celeiro os leitores tem acesso ao conteúdo do impresso após a publicação do semanário e além dos colunistas, matérias, artigos e opinião além de reportagens das editorias e muito mais.<div class="footer-email-wrap">Contato: <a href="mailto:oceleirocomercial@gmail.com">oceleirocomercial@gmail.com</a></div></aside></div><div class="td-pb-span4"><aside class="footer-social-wrap td-social-style-2"><div class="block-title"><span>SIGA-NOS</span></div>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.facebook.com/jornal.oceleiro/" title="Facebook">
+                <i class="td-icon-font td-icon-facebook"></i>
+                <span style="display: none">Facebook</span>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="http://instagram.com/jornaloceleiro" title="Instagram">
+                <i class="td-icon-font td-icon-instagram"></i>
+                <span style="display: none">Instagram</span>
+            </a>
+        </span>
+        <span class="td-social-icon-wrap">
+            <a target="_blank" href="https://www.youtube.com/channel/UCUYolrWfFPP8oWK6r5TQnYw?view_as=subscriber" title="Youtube">
+                <i class="td-icon-font td-icon-youtube"></i>
+                <span style="display: none">Youtube</span>
+            </a>
+        </span></aside></div>        </div>
+    </div>
+</div>
+                <!-- Sub Footer -->
+				    <div class="td-sub-footer-container td-container-wrap ">
+        <div class="td-container">
+            <div class="td-pb-row">
+                <div class="td-pb-span td-sub-footer-menu">
+                                    </div>
+
+                <div class="td-pb-span td-sub-footer-copy">
+                    &copy; 2024 O Celeiro | Desenvolvido por Joao Rupp                </div>
+            </div>
+        </div>
+    </div>
+            </div><!--close td-footer-wrap-->
+			
+</div><!--close td-outer-wrap-->
+
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script type="rocketlazyloadscript">
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+                  <div class="td-more-articles-box">
+                    <i class="td-icon-close td-close-more-articles-box"></i>
+                    <span class="td-more-articles-box-title">MAIS NOTÍCIAS</span>
+                    <div class="td-content-more-articles-box">
+
+                    
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/agro-divel-realiza-evento-alusivo-ao-dia-internacional-da-mulher/"  rel="bookmark" class="td-image-wrap " title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher" ><img loading="lazy" class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/04/IMG_1141-100x70.jpg"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/agro-divel-realiza-evento-alusivo-ao-dia-internacional-da-mulher/"  rel="bookmark" title="Agro Divel realiza evento alusivo ao Dia Internacional da Mulher">Agro Divel realiza evento alusivo ao Dia Internacional da Mulher</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-04-08T07:07:49-03:00" >8 abril, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+        
+        <div class="td_module_6 td_module_wrap td-animation-stack">
+
+        <div class="td-module-thumb"><a href="https://jornalceleiro.com.br/2024/04/reuniao-do-cosud-define-estrategias-para-o-andamento-dos-projetos-de-ferrovias/"  rel="bookmark" class="td-image-wrap " title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias" ><img loading="lazy" class="entry-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGAQMAAAAASKMqAAAAA1BMVEWurq51dlI4AAAAAXRSTlMmkutdmwAAABBJREFUKM9jGAWjYBQMKwAAA9QAAQWBn6cAAAAASUVORK5CYII=" alt="" title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias" data-type="image_tag" data-img-url="https://jornalceleiro.com.br/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-04-at-19.08.15-100x70.jpeg"  width="100" height="70" /></a></div>
+        <div class="item-details">
+            <h3 class="entry-title td-module-title"><a href="https://jornalceleiro.com.br/2024/04/reuniao-do-cosud-define-estrategias-para-o-andamento-dos-projetos-de-ferrovias/"  rel="bookmark" title="Reunião do Cosud define estrategias para o andamento dos projetos de ferrovias">Reunião do Cosud define estrategias para o andamento dos projetos de...</a></h3>            <div class="td-module-meta-info">
+                                                <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2024-04-07T15:00:59-03:00" >7 abril, 2024</time></span>                            </div>
+        </div>
+
+        </div>
+
+                            </div>
+                </div>
+
+    <!--
+
+        Theme: Newspaper by tagDiv.com 2023
+        Version: 12.6.2 (rara)
+        Deploy mode: deploy
+        
+        uid: 6613c64017bf7
+    -->
+
+    
+<!-- Custom css from theme panel -->
+<style type="text/css" media="screen">.td-related-title>.td-related-right{display:none}.block-title>span,.block-title>span>a,.block-title>a,.block-title>label,.widgettitle,.widgettitle:after,.td-trending-now-title,.td-trending-now-wrapper:hover .td-trending-now-title,.wpb_tabs li.ui-tabs-active a,.wpb_tabs li:hover a,.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab.vc_active>a,.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container .vc_tta-tab:hover>a,.td_block_template_1 .td-related-title .td-cur-simple-item,.woocommerce .product .products h2:not(.woocommerce-loop-product__title),.td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more,.td-weather-information:before,.td-weather-week:before,.td_block_exchange .td-exchange-header:before,.td-theme-wrap .td_block_template_3 .td-block-title>*,.td-theme-wrap .td_block_template_4 .td-block-title>*,.td-theme-wrap .td_block_template_7 .td-block-title>*,.td-theme-wrap .td_block_template_9 .td-block-title:after,.td-theme-wrap .td_block_template_10 .td-block-title::before,.td-theme-wrap .td_block_template_11 .td-block-title::before,.td-theme-wrap .td_block_template_11 .td-block-title::after,.td-theme-wrap .td_block_template_14 .td-block-title,.td-theme-wrap .td_block_template_15 .td-block-title:before,.td-theme-wrap .td_block_template_17 .td-block-title:before{background-color:#095ba7}.block-title,.td_block_template_1 .td-related-title,.wpb_tabs .wpb_tabs_nav,.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,.woocommerce div.product .woocommerce-tabs ul.tabs:before,.td-theme-wrap .td_block_template_5 .td-block-title>*,.td-theme-wrap .td_block_template_17 .td-block-title,.td-theme-wrap .td_block_template_17 .td-block-title::before{border-color:#0029FA}.td-theme-wrap .tdi_28 .block-title>*,.td-theme-wrap .tdi_28 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7}.td-theme-wrap .tdi_29 .block-title>*,.td-theme-wrap .tdi_29 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7}.td-theme-wrap .tdi_31 .block-title>*,.td-theme-wrap .tdi_31 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7}.td-theme-wrap .tdi_28 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_29 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_31 .block-title{border-color:#095ba7}.block-title,.td_block_template_1 .td-related-title,.wpb_tabs .wpb_tabs_nav,.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,.woocommerce div.product .woocommerce-tabs ul.tabs:before,.td-theme-wrap .td_block_template_5 .td-block-title>*,.td-theme-wrap .td_block_template_17 .td-block-title,.td-theme-wrap .td_block_template_17 .td-block-title::before{border-color:#095ba7}.block-title,.td_block_template_1 .td-related-title,.wpb_tabs .wpb_tabs_nav,.vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,.woocommerce div.product .woocommerce-tabs ul.tabs:before,.td-theme-wrap .td_block_template_5 .td-block-title>*,.td-theme-wrap .td_block_template_17 .td-block-title,.td-theme-wrap .td_block_template_17 .td-block-title::before{border-color:#095ba7}.td-theme-wrap .tdi_26 .block-title>*,.td-theme-wrap .tdi_26 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7;border-color:#095ba7}.td-theme-wrap .tdi_27 .block-title>*,.td-theme-wrap .tdi_27 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7;border-color:#095ba7}.td-theme-wrap .tdi_26 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_27 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_7 .block-title>*,.td-theme-wrap .tdi_7 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095ba7}.td-theme-wrap .tdi_7 .block-title{border-color:#095ba7}.td-theme-wrap .tdi_46 .block-title>*,.td-theme-wrap .tdi_46 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095bac}.td-theme-wrap .tdi_46 .block-title{border-color:#095bac}.td-theme-wrap .tdi_47 .block-title>*,.td-theme-wrap .tdi_47 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095bac}.td-theme-wrap .tdi_47 .block-title{border-color:#095bac}.td-theme-wrap .tdi_49 .block-title>*,.td-theme-wrap .tdi_49 .td-subcat-dropdown:hover .td-subcat-more{background-color:#095bac}.td-theme-wrap .tdi_49 .block-title{border-color:#095bac}.footer-text-wrap .footer-email-wrap a{color:#fff}</style>
+
+<link rel='stylesheet' id='slideshow-jquery-image-gallery-stylesheet_style-light-css' href='https://jornalceleiro.com.br/wp-content/plugins/slideshow-jquery-image-gallery/css/style-light.css?ver=2.3.1' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-cloud-library/assets/js/js_posts_autoload.min.js?ver=34c58173fa732974ccb0ca4df5ede162" id="tdb_js_posts_autoload-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tagdiv_theme.min.js?ver=12.6.2" id="td-site-min-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdPostImages.js?ver=12.6.2" id="tdPostImages-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdSmartSidebar.js?ver=12.6.2" id="tdSmartSidebar-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdSocialSharing.js?ver=12.6.2" id="tdSocialSharing-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdModalPostImages.js?ver=12.6.2" id="tdModalPostImages-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-includes/js/comment-reply.min.js?ver=6.4.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-cloud-library/assets/js/js_files_for_front.min.js?ver=34c58173fa732974ccb0ca4df5ede162" id="tdb_js_files_for_front-js"></script>
+<script type="text/javascript" id="slideshow-jquery-image-gallery-script-js-extra">
+/* <![CDATA[ */
+var SlideshowPluginSettings_63323 = {"animation":"fade","slideSpeed":"2","descriptionSpeed":"0.3","intervalSpeed":"5","slidesPerView":"1","maxWidth":"0","aspectRatio":"1:1","height":"300","imageBehaviour":"natural","showDescription":"false","hideDescription":"true","preserveSlideshowDimensions":"false","enableResponsiveness":"true","play":"true","loop":"true","pauseOnHover":"true","controllable":"false","hideNavigationButtons":"true","showPagination":"false","hidePagination":"true","controlPanel":"false","hideControlPanel":"true","waitUntilLoaded":"true","showLoadingIcon":"true","random":"false","avoidFilter":"true"};
+var slideshow_jquery_image_gallery_script_adminURL = "https:\/\/jornalceleiro.com.br\/wp-admin\/";
+var SlideshowPluginSettings_64873 = {"animation":"fade","slideSpeed":"2","descriptionSpeed":"0.3","intervalSpeed":"5","slidesPerView":"1","maxWidth":"0","aspectRatio":"1:1","height":"82","imageBehaviour":"natural","showDescription":"false","hideDescription":"true","preserveSlideshowDimensions":"false","enableResponsiveness":"true","play":"true","loop":"true","pauseOnHover":"true","controllable":"false","hideNavigationButtons":"true","showPagination":"false","hidePagination":"true","controlPanel":"false","hideControlPanel":"true","waitUntilLoaded":"true","showLoadingIcon":"true","random":"false","avoidFilter":"true"};
+var slideshow_jquery_image_gallery_script_adminURL = "https:\/\/jornalceleiro.com.br\/wp-admin\/";
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/slideshow-jquery-image-gallery/js/min/all.frontend.min.js?ver=2.3.1" id="slideshow-jquery-image-gallery-script-js"></script>
+<script type="rocketlazyloadscript" defer data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1706193717" id="akismet-frontend-js"></script>
+
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdLoadingBox.js?ver=12.6.2" id="tdLoadingBox-js"></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdMenu.js?ver=12.6.2" id="tdMenu-js"></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdAjaxSearch.js?ver=12.6.2" id="tdAjaxSearch-js"></script>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://jornalceleiro.com.br/wp-content/plugins/td-composer/legacy/Newspaper/js/tdInfiniteLoader.js?ver=12.6.2" id="tdInfiniteLoader-js"></script>
+<!-- JS generated by theme -->
+
+<script type="rocketlazyloadscript">
+    
+</script>
+
+
+<script type="rocketlazyloadscript">var td_res_context_registered_atts=[];</script>
+
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1712571968 -->
